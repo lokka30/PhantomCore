@@ -23,11 +23,11 @@ public class SetWarpCommand implements CommandExecutor {
                 if (args.length == 1) {
                     final String warp = args[0].toLowerCase();
                     instance.data.set("warps." + warp + ".x", player.getLocation().getBlockX() + 0.5);
-                    instance.data.set("warps." + warp + ".y", player.getLocation().getBlockY() + 0.5);
+                    instance.data.set("warps." + warp + ".y", player.getLocation().getBlockY());
                     instance.data.set("warps." + warp + ".z", player.getLocation().getBlockZ() + 0.5);
                     instance.data.set("warps." + warp + ".pitch", player.getLocation().getPitch());
                     instance.data.set("warps." + warp + ".yaw", player.getLocation().getYaw());
-                    instance.data.set("warps." + warp + ".world", player.getLocation().getWorld());
+                    instance.data.set("warps." + warp + ".world", player.getLocation().getWorld().getName());
                     player.sendMessage(instance.colorize(instance.messages.get("setwarp", "Set warp %warp%."))
                             .replaceAll("%warp%", warp));
                 } else {
