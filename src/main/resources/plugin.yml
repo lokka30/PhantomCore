@@ -1,0 +1,36 @@
+name: PhantomCore
+version: ${project.version}
+api-version: '1.15'
+description: ${project.description}
+authors:
+  - lokka30 (Author)
+  - JavaFactory (LightningStorage Lib)
+  - bStats Team (bStats Lib)
+
+main: io.github.lokka30.phantomcore.PhantomCore
+
+commands:
+  vanish:
+    description: Become invisible to other players.
+    usage: /<command> [player] [on/off]
+  setwarp:
+    description: Set a warp to the centre of your current location.
+    usage: /<command> <warp name>
+  delwarp:
+    description: Delete a warp.
+    usage: /<command> <warp name>
+  warp:
+    description: Teleport to a warp.
+    usage: /<command> <warp name> [player]
+  near:
+    description: View nearby players (within 200 blocks).
+    usage: /<command> [player]
+  invsee:
+    description: View the inventory of an online player.
+    usage: /<command> <player>
+
+permissions:
+  phantomcore.vanish:
+    default: op
+  phantomcore.vanish.others:
+    default: op

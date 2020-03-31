@@ -1,0 +1,57 @@
+#a
+#b
+#c
+#d
+delwarp: '&a&lPhantomCore: &7Deleted warp &a%warp%&7.'
+delwarp-usage: '&a&lPhantomCore: &7Usage: &a/delwarp <warp name>'
+#e
+#f
+#g
+#h
+#i
+invsee-usage: '&a&lPhantomCore: &7Usage: &a/invsee <player>'
+#j
+#k
+#l
+#m
+#n
+near-console-usage: '&a&lPhantomCore: &7Usage (console): &a/near <player>'
+near-usage: '&a&lPhantomCore: &7Usage: &a/near [player]'
+nearby-players-header: '&a&lPhantomCore: &7Nearby players (within 200 blocks away):'
+nearby-players-iterator: '&8 %arrow% &r%player% &8- &a%distance% &7blocks away.'
+nearby-others-header: '&a&lPhantomCore: &7Players nearby &r%player%&7 (within 200 blocks away):'
+no-nearby-players: '&a&lPhantomCore: &7There are no nearby players to display.'
+no-permission: '&a&lPhantomCore: &7You don''t have access to that.'
+not-played-before: '&a&lPhantomCore: &r%player%&7 hasn''t played before.'
+#o
+opened-inventory: '&a&lPhantomCore: &7Opened inventory of &r%player%&7.'
+#p
+player-not-online: '&a&lPhantomCore: &r%player%&7 isn''t online.'
+players-only: '&a&lPhantomCore: &7Only players can use this command.'
+#q
+#r
+#s
+setwarp: '&a&lPhantomCore: &7Set warp &a%warp%&7.'
+setwarp-usage: '&a&lPhantomCore: &7Usage: &a/setwarp <warp name>'
+#t
+#u
+#v
+vanish-self-on: '&a&lPhantomCore: &7Vanish &aenabled&7.'
+vanish-self-off: '&a&lPhantomCore: &7Vanish &cdisabled&7.'
+vanish-other-on: '&a&lPhantomCore: &7Vanish &aenabled&7 for &r%player%&7.'
+vanish-other-off: '&a&lPhantomCore: &7Vanish &cdisabled&7 for &r%player%&7.'
+vanish-console-usage: '&a&lPhantomCore: &7Usage (console): &a/vanish <player> [on/off]'
+vanish-usage: '&a&lPhantomCore: &7Usage: &a/vanish [player] [on/off]'
+#w
+warp: '&a&lPhantomCore: &7Welcome to the warp &a%warp%&7.'
+warp-console-usage: '&a&lPhantomCore: &7Usage (console): &a/warp <warp name> <player>'
+warp-null: '&a&lPhantomCore: &7A warp named &a%warp%&7 doesn''t exist.'
+warp-other: '&a&lPhantomCore: &7Sent &r%player%&7 to the warp &a%warp%&7.'
+warp-usage: '&a&lPhantomCore: &7Usage: &a/warp <warp name> [player]'
+warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no longer exists.'
+#x
+#y
+#z
+
+
+file-version: 1
