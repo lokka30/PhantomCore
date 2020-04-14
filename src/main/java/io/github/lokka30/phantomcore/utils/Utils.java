@@ -20,7 +20,7 @@ public class Utils {
     }
 
     public int getLatestMessagesVersion() {
-        return 1;
+        return 2;
     }
 
     public int getLatestDataVersion() {

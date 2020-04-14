@@ -1,11 +1,31 @@
 #a
 #b
+broadcast-prefix: '&a&lBroadcast: &7'
+broadcast-usage: '&a&lPhantomCore: &7Usage: &a/broadcast <message>'
 #c
+clear-inventory-by-other: '&a&lPhantomCore: &7Your inventory was cleared by &r%sender%&7.'
+clear-inventory-other: '&a&lPhantomCore: &7Cleared &r%player%&7''s inventory.'
+clear-inventory-usage: '&a&lPhantomCore: &7Usage: &a/clearinventory [player]'
+clear-inventory-usage-console: '&a&lPhantomCore: &7Usage (console): &a/clearinventory <player>'
+clear-inventory-self: '&a&lPhantomCore: &7Cleared your inventory.'
 #d
 delwarp: '&a&lPhantomCore: &7Deleted warp &a%warp%&7.'
 delwarp-usage: '&a&lPhantomCore: &7Usage: &a/delwarp <warp name>'
 #e
 #f
+fly-mode-disabled: '&a&lPhantomCore: &7Flight mode &cdisabled&7.'
+fly-mode-disabled-by: '&a&lPhantomCore: &7Flight mode &cdisabled&7 by &r%sender&7.'
+fly-mode-disabled-others: '&a&lPhantomCore: &7Flight mode &cdisabled&7 for &r%player%&7.'
+fly-mode-enabled: '&a&lPhantomCore: &7Flight mode &aenabled&7.'
+fly-mode-enabled-by: '&a&lPhantomCore: &7Flight mode &aenabled&7 by &r%sender%&7.'
+fly-mode-enabled-others: '&a&lPhantomCore: &7Flight mode &aenabled&7 for &r%player%&7.'
+fly-usage: '&a&lPhantomCore: &7Usage: &a/fly [on/off] [player]'
+fly-usage-console: '&a&lPhantomCore: &7Usage (console): &a/fly <on/off> <player>'
+flyspeed-invalid-speed: '&a&lPhantomCore: &7Invalid flyspeed &a%arg%&7, it must be between &a0 &7and &a10&7.'
+flyspeed-usage: '&a&lPhantomCore: &7Usage: &a/flyspeed <0-10> [player]'
+flyspeed-usage-console: '&a&lPhantomCore: &7Usage (console): &a/flyspeed <0-10> <player>'
+flyspeed-set: '&a&lPhantomCore: &7Set your flyspeed to &a%speed%&7.'
+flyspeed-set-other: '&a&lPhantomCore: &7Set &r%player%&7''s flyspeed to &a%speed%&7.'
 #g
 #h
 #i
@@ -43,6 +63,11 @@ vanish-other-off: '&a&lPhantomCore: &7Vanish &cdisabled&7 for &r%player%&7.'
 vanish-console-usage: '&a&lPhantomCore: &7Usage (console): &a/vanish <player> [on/off]'
 vanish-usage: '&a&lPhantomCore: &7Usage: &a/vanish [player] [on/off]'
 #w
+walkspeed-invalid-speed: '&a&lPhantomCore: &7Invalid walkspeed &a%arg%&7, it must be between &a0 &7and &a10&7.'
+walkspeed-usage: '&a&lPhantomCore: &7Usage: &a/walkspeed <0-10> [player]'
+walkspeed-usage-console: '&a&lPhantomCore: &7Usage (console): &a/walkspeed <0-10> <player>'
+walkspeed-set: '&a&lPhantomCore: &7Set your walkspeed to &a%speed%&7.'
+walkspeed-set-other: '&a&lPhantomCore: &7Set &r%player%&7''s walkspeed to &a%speed%&7.'
 warp: '&a&lPhantomCore: &7Welcome to the warp &a%warp%&7.'
 warp-console-usage: '&a&lPhantomCore: &7Usage (console): &a/warp <warp name> <player>'
 warp-null: '&a&lPhantomCore: &7A warp named &a%warp%&7 doesn''t exist.'
@@ -53,5 +78,4 @@ warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no long
 #y
 #z
 
-
-file-version: 1
+file-version: 2

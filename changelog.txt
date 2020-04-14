@@ -1,0 +1,24 @@
+1.0-SNAPSHOT:
+- Classes
+ - Manager
+ - PhantomCore
+ - DelWarpCommand
+ - FlyspeedCommand
+ - InvseeCommand
+ - NearCommand
+ - SetWarpCommand
+ - VanishCommand
+ - TemplateCommand
+ - WarpCommand
+
+1.1-SNAPSHOT:
+- fixed warping other players permission and not being able to use as console
+- fixed players that unvanished are still invisible to other players
+
+1.2-SNAPSHOT:
+changes:
+- messages.yml file-version = 2
+- added /broadcast
+- added /clearinventory
+- added /fly
+- added /walkspeed

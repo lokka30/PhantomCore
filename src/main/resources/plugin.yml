@@ -28,9 +28,50 @@ commands:
   invsee:
     description: View the inventory of an online player.
     usage: /<command> <player>
+  flyspeed:
+    description: Set your fly speed.
+    usage: /<command> <speed 0-10>
+  walkspeed:
+    description: Set your walk speed.
+    usage: /<command> <speed 0-10>
+  clearinventory:
+    description: Clear your inventory.
+    usage: /<command> [player]
+  broadcast:
+    description: Broadcast a message to the server.
+    usage: /<command> <message>
+  fly:
+    description: Toggle if you are allowed to fly.
+    usage: /<command> [on/off] [player]
 
 permissions:
+  phantomcore.delwarp:
+    default: op
+  phantomcore.invsee:
+    default: op
+  phantomcore.near:
+    default: true
+  phantomcore.near.others:
+    default: op
   phantomcore.vanish:
     default: op
   phantomcore.vanish.others:
+    default: op
+  phantomcore.warp:
+    default: true
+  phantomcore.warp.others:
+    default: op
+  phantomcore.broadcast:
+    default: op
+  phantomcore.clearinventory:
+    default: op
+  phantomcore.clearinventory.others:
+    default: op
+  phantomcore.flyspeed:
+    default: op
+  phantomcore.flyspeed.others:
+    default: op
+  phantomcore.walkspeed:
+    default: op
+  phantomcore.walkspeed.others:
     default: op

@@ -135,6 +135,11 @@ public class PhantomCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand(this));
         Objects.requireNonNull(getCommand("near")).setExecutor(new NearCommand(this));
         Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvseeCommand(this));
+        Objects.requireNonNull(getCommand("flyspeed")).setExecutor(new FlyspeedCommand(this));
+        Objects.requireNonNull(getCommand("walkspeed")).setExecutor(new WalkspeedCommand(this));
+        Objects.requireNonNull(getCommand("clearinventory")).setExecutor(new ClearInventoryCommand(this));
+        Objects.requireNonNull(getCommand("broadcast")).setExecutor(new BroadcastCommand(this));
+        Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCommand(this));
     }
 
     public String colorize(final String msg) {

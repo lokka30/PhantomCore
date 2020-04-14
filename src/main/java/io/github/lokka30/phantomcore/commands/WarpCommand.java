@@ -52,7 +52,7 @@ public class WarpCommand implements CommandExecutor {
                     sender.sendMessage(instance.colorize(instance.messages.get("warp-console-usage", "Usage (console): /warp <warp name> <player>")));
                 }
             } else if (args.length == 2) {
-                if (sender instanceof Player) {
+                if (sender.hasPermission("phantomcore.warp.others")) {
                     final Player player = Bukkit.getPlayer(args[1]);
                     final String warp = args[0].toLowerCase();
                     final String path = "warps." + warp;
@@ -90,7 +90,7 @@ public class WarpCommand implements CommandExecutor {
                     sender.sendMessage(instance.colorize(instance.messages.get("warp-console-usage", "Usage (console): /warp <warp name> <player>")));
                 }
             } else {
-                sender.sendMessage(instance.colorize(instance.messages.get("warp-usage", "Usage: /warp <warp name> [player]")));
+                sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));
             }
         } else {
             sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

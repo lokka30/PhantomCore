@@ -21,17 +21,23 @@ public class Manager {
 
     public void updateVanished() {
         ArrayList<Player> vanishedPlayers = new ArrayList<>();
+        ArrayList<Player> nonVanishedPlayers = new ArrayList<>();
 
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             final String uuid = onlinePlayer.getUniqueId().toString();
             if (instance.data.get("players." + uuid + ".vanished", false)) {
                 vanishedPlayers.add(onlinePlayer);
+            } else {
+                nonVanishedPlayers.add(onlinePlayer);
             }
         }
 
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             for (Player vanishedPlayer : vanishedPlayers) {
                 onlinePlayer.hidePlayer(instance, vanishedPlayer);
+            }
+            for (Player nonVanishedPlayer : nonVanishedPlayers) {
+                onlinePlayer.showPlayer(instance, nonVanishedPlayer);
             }
         }
     }
