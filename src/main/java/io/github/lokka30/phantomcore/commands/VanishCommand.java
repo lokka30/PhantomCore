@@ -31,12 +31,11 @@ public class VanishCommand implements CommandExecutor {
                     if (instance.data.get(path, false)) {
                         instance.data.set(path, false);
                         player.sendMessage(instance.colorize(instance.messages.get("vanish-self-off", "Vanish disabled.")));
-                        instance.manager.updateVanished();
                     } else {
                         instance.data.set(path, true);
                         player.sendMessage(instance.colorize(instance.messages.get("vanish-self-on", "Vanish enabled")));
-                        instance.manager.updateVanished();
                     }
+                    instance.manager.updateVanished();
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("vanish-console-usage", "Usage (console): /vanish <player> [on/off]")));
                 }
@@ -52,13 +51,12 @@ public class VanishCommand implements CommandExecutor {
                             instance.data.set(path, false);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-off", "Vanish disabled for %player%.")
                                     .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
-                            instance.manager.updateVanished();
                         } else {
                             instance.data.set(path, true);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-on", "Vanish enabled for %player%.")
                                     .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
-                            instance.manager.updateVanished();
                         }
+                        instance.manager.updateVanished();
                     }
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

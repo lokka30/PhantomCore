@@ -38,11 +38,10 @@ public class NearCommand implements CommandExecutor {
                             final Player nearbyPlayer = (Player) pair.getKey();
                             final int distance = (Integer) pair.getValue();
 
-                            player.sendMessage(instance.colorize((String) instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
+                            player.sendMessage(instance.colorize(instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
                                     .replaceAll("%player%", nearbyPlayer.getName())
                                     .replaceAll("%distance%", String.valueOf(distance)));
                             iterator.remove();
-                            ;
                         }
                     }
                 } else {
@@ -72,7 +71,6 @@ public class NearCommand implements CommandExecutor {
                                         .replaceAll("%player%", nearbyPlayer.getName())
                                         .replaceAll("%distance%", String.valueOf(distance)));
                                 iterator.remove();
-                                ;
                             }
                         }
                     }

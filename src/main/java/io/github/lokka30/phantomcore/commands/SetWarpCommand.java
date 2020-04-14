@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class SetWarpCommand implements CommandExecutor {
 
     private PhantomCore instance;
@@ -27,7 +29,7 @@ public class SetWarpCommand implements CommandExecutor {
                     instance.data.set("warps." + warp + ".z", player.getLocation().getBlockZ() + 0.5);
                     instance.data.set("warps." + warp + ".pitch", player.getLocation().getPitch());
                     instance.data.set("warps." + warp + ".yaw", player.getLocation().getYaw());
-                    instance.data.set("warps." + warp + ".world", player.getLocation().getWorld().getName());
+                    instance.data.set("warps." + warp + ".world", Objects.requireNonNull(player.getLocation().getWorld()).getName());
                     player.sendMessage(instance.colorize(instance.messages.get("setwarp", "Set warp %warp%."))
                             .replaceAll("%warp%", warp));
                 } else {
