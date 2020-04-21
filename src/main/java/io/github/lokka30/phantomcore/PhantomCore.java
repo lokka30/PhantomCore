@@ -6,6 +6,7 @@ import io.github.lokka30.phantomcore.commands.*;
 import io.github.lokka30.phantomcore.events.JoinVanishUpdateListener;
 import io.github.lokka30.phantomcore.utils.LogLevel;
 import io.github.lokka30.phantomcore.utils.Utils;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,6 +45,9 @@ public class PhantomCore extends JavaPlugin {
 
             log(LogLevel.INFO, "Registering commands...");
             registerCommands();
+
+            log(LogLevel.INFO, "Starting bStats metrics...");
+            new Metrics(this, 7258);
 
             log(LogLevel.INFO, "[Enabling Complete]");
         } else {
@@ -129,17 +133,21 @@ public class PhantomCore extends JavaPlugin {
     }
 
     private void registerCommands() {
-        Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCommand(this));
-        Objects.requireNonNull(getCommand("setwarp")).setExecutor(new SetWarpCommand(this));
-        Objects.requireNonNull(getCommand("delwarp")).setExecutor(new DelWarpCommand(this));
-        Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand(this));
-        Objects.requireNonNull(getCommand("near")).setExecutor(new NearCommand(this));
-        Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvseeCommand(this));
-        Objects.requireNonNull(getCommand("flyspeed")).setExecutor(new FlyspeedCommand(this));
-        Objects.requireNonNull(getCommand("walkspeed")).setExecutor(new WalkspeedCommand(this));
-        Objects.requireNonNull(getCommand("clearinventory")).setExecutor(new ClearInventoryCommand(this));
         Objects.requireNonNull(getCommand("broadcast")).setExecutor(new BroadcastCommand(this));
+        Objects.requireNonNull(getCommand("clearinventory")).setExecutor(new ClearInventoryCommand(this));
+        Objects.requireNonNull(getCommand("delwarp")).setExecutor(new DelWarpCommand(this));
         Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCommand(this));
+        Objects.requireNonNull(getCommand("flyspeed")).setExecutor(new FlyspeedCommand(this));
+        Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvseeCommand(this));
+        Objects.requireNonNull(getCommand("near")).setExecutor(new NearCommand(this));
+        Objects.requireNonNull(getCommand("setspawn")).setExecutor(new SetSpawnCommand(this));
+        Objects.requireNonNull(getCommand("setwarp")).setExecutor(new SetWarpCommand(this));
+        Objects.requireNonNull(getCommand("smite")).setExecutor(new SmiteCommand(this));
+        Objects.requireNonNull(getCommand("spawn")).setExecutor(new SpawnCommand(this));
+        Objects.requireNonNull(getCommand("top")).setExecutor(new TopCommand(this));
+        Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCommand(this));
+        Objects.requireNonNull(getCommand("walkspeed")).setExecutor(new WalkspeedCommand(this));
+        Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand(this));
     }
 
     public String colorize(final String msg) {
@@ -147,7 +155,7 @@ public class PhantomCore extends JavaPlugin {
     }
 
     public void log(final LogLevel level, String msg) {
-        msg = colorize("&7" + msg);
+        msg = colorize("&aPhantomCore: &7" + msg);
 
         switch (level) {
             case INFO:

@@ -38,3 +38,21 @@ changes:
 - added permission descriptions in 'plugin.yml'
 - added permissions in 'plugin.yml'
 - added '/spawn' and '/setspawn' messages to 'messages.yml'
+
+1.4.0-ALPHA:
+update notes: []
+file changes:
+- messages.yml updated
+- settings.yml updated
+notable changes:
+- Added command '/smite [player]' - strikes lightning at target block or at target player's location
+ - Added permission 'phantomcore.smite'
+ - Added permission 'phantomcore.smite.others'
+- Added command '/top' - teleports you to the highest block of your x and z coordinate
+ - Added permission 'phantomcore.top'
+other changes:
+- Fixed using raw use of Iterator in 'NearCommand'
+- Fixed few commands not being registered
+- Ordered command registration in alphabetical order
+- Now loading bStats metrics on startup
+- Updated dependency: bStats: v1.5 -> v1.7

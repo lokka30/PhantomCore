@@ -53,6 +53,12 @@ players-only: '&a&lPhantomCore: &7Only players can use this command.'
 #s
 setwarp: '&a&lPhantomCore: &7Set warp &a%warp%&7.'
 setwarp-usage: '&a&lPhantomCore: &7Usage: &a/setwarp <warp name>'
+smite-no-target-block: '&a&lPhantomCore: &7You aren''t looking at a block within a range of &a%amount%&7.'
+smite-usage: '&a&lPhantomCore: &7Usage: &a/smite [player]'
+smite-usage-console: '&a&lPhantomCore: &7Usage (console): &a/smite <player>'
+smite-success: '&a&lPhantomCore: &7Poof!'
+smite-success-by: '&a&lPhantomCore: &7Lightning was struck upon you by &r%sender%&7!'
+smite-success-others: '&a&lPhantomCore: &7You struck lightning upon &r%target%&7!'
 spawn-bad-location: '&a&lPhantomCore: &7Either the spawn isn''t set, or the current spawn location is invalid.'
 spawn-set: '&a&lPhantomCore: &7Set spawn at &a%x%&7, &a%y%&7, &a%z%&7 in world &a%world%&7.'
 spawn-set-usage: '&a&lPhantomCore: &7Usage: &a/setspawn'
@@ -62,6 +68,8 @@ spawn-teleported-others: '&a&lPhantomCore: &7Teleported &r%target%&7 to spawn.'
 spawn-usage: '&a&lPhantomCore: &7Usage: &a/spawn [player]'
 spawn-usage-console: '&a&lPhantomCore: &7Usage (console): &a/spawn <player>'
 #t
+top-usage: '&a&lPhantomCore: &7Usage: &a/top'
+top-success: '&a&lPhantomCore: &7Poof!'
 #u
 #v
 vanish-self-on: '&a&lPhantomCore: &7Vanish &aenabled&7.'
@@ -86,4 +94,4 @@ warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no long
 #y
 #z
 
-file-version: 3
+file-version: 4

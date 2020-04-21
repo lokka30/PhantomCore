@@ -8,41 +8,55 @@ authors:
   - bStats Team (bStats Lib)
 
 main: io.github.lokka30.phantomcore.PhantomCore
+load: POSTWORLD
+prefix: 'PhantomCore'
 
 commands:
-  vanish:
-    description: Become invisible to other players.
-    usage: /<command> [player] [on/off]
-  setwarp:
-    description: Set a warp to the centre of your current location.
-    usage: /<command> <warp name>
-  delwarp:
-    description: Delete a warp.
-    usage: /<command> <warp name>
-  warp:
-    description: Teleport to a warp.
-    usage: /<command> <warp name> [player]
-  near:
-    description: View nearby players (within 200 blocks).
-    usage: /<command> [player]
-  invsee:
-    description: View the inventory of an online player.
-    usage: /<command> <player>
-  flyspeed:
-    description: Set your fly speed.
-    usage: /<command> <speed 0-10>
-  walkspeed:
-    description: Set your walk speed.
-    usage: /<command> <speed 0-10>
-  clearinventory:
-    description: Clear your inventory.
-    usage: /<command> [player]
   broadcast:
     description: Broadcast a message to the server.
     usage: /<command> <message>
+  clearinventory:
+    description: Clear your inventory.
+    usage: /<command> [player]
+  delwarp:
+    description: Delete a warp.
+    usage: /<command> <warp name>
   fly:
     description: Toggle if you are allowed to fly.
     usage: /<command> [on/off] [player]
+  flyspeed:
+    description: Set your fly speed.
+    usage: /<command> <speed 0-10>
+  invsee:
+    description: View the inventory of an online player.
+    usage: /<command> <player>
+  near:
+    description: View nearby players (within 200 blocks).
+    usage: /<command> [player]
+  setspawn:
+    description: Set the spawn point to your current location.
+    usage: /<command>
+  setwarp:
+    description: Set a warp to the centre of your current location.
+    usage: /<command> <warp name>
+  smite:
+    description: Strike lightning at your target block or at the target player.
+    usage: /<command> [player]
+  spawn:
+    description: Teleport to spawn.
+    usage: /<command> [player]
+  top:
+    description: Teleport to the highest block of your x and z coordinate.
+    usage: /<command>
+  vanish:
+    description: Become invisible to other players.
+    usage: /<command> [player] [on/off]
+  walkspeed:
+    description: Set your walk speed.
+    usage: /<command> <speed 0-10>
+  warp:
+    description: Teleport to a warp.
+    usage: /<command> <warp name> [player]
 
 permissions:
   phantomcore.delwarp:
@@ -108,3 +122,12 @@ permissions:
   phantomcore.fly.others:
     default: op
     description: allowed to specify a target in /fly
+  phantomcore.smite:
+    default: op
+    description: allowed to use /smite
+  phantomcore.smite.others:
+    default: op
+    description: allowed to specify a target in /smite
+  phantomcore.top:
+    default: op
+    description: allowed to use /top

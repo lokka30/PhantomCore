@@ -32,11 +32,11 @@ public class NearCommand implements CommandExecutor {
                         player.sendMessage(instance.colorize(instance.messages.get("no-nearby-players", "There are no nearby players to display.")));
                     } else {
                         player.sendMessage(instance.colorize(instance.messages.get("nearby-players-header", "Nearby players:")));
-                        Iterator iterator = nearbyPlayers.entrySet().iterator();
+                        Iterator<Map.Entry<Player, Integer>> iterator = nearbyPlayers.entrySet().iterator();
                         while (iterator.hasNext()) {
-                            Map.Entry pair = (Map.Entry) iterator.next();
-                            final Player nearbyPlayer = (Player) pair.getKey();
-                            final int distance = (Integer) pair.getValue();
+                            Map.Entry<Player, Integer> pair = iterator.next();
+                            final Player nearbyPlayer = pair.getKey();
+                            final int distance = pair.getValue();
 
                             player.sendMessage(instance.colorize(instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
                                     .replaceAll("%player%", nearbyPlayer.getName())
@@ -61,11 +61,11 @@ public class NearCommand implements CommandExecutor {
                             sender.sendMessage(instance.colorize(instance.messages.get("no-nearby-players", "There are no nearby players to display.")));
                         } else {
                             sender.sendMessage(instance.colorize(instance.messages.get("nearby-players-others-header", "Players nearby %player%:")));
-                            Iterator iterator = nearbyPlayers.entrySet().iterator();
+                            Iterator<Map.Entry<Player, Integer>> iterator = nearbyPlayers.entrySet().iterator();
                             while (iterator.hasNext()) {
-                                Map.Entry pair = (Map.Entry) iterator.next();
-                                final Player nearbyPlayer = (Player) pair.getKey();
-                                final int distance = (Integer) pair.getValue();
+                                Map.Entry<Player, Integer> pair = iterator.next();
+                                final Player nearbyPlayer = pair.getKey();
+                                final int distance = pair.getValue();
 
                                 sender.sendMessage(instance.colorize(instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
                                         .replaceAll("%player%", nearbyPlayer.getName())

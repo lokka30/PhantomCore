@@ -15,6 +15,13 @@ public class TemplateCommand implements CommandExecutor {
         this.instance = instance;
     }
 
+    /*
+    Ensure:
+    - Command(s) listed in plugin.yml
+    - Permission(s) listed in plugin.yml
+    - Class is registered in PhantomCore#registerCommands()
+     */
+
     @Override
     public boolean onCommand(@NotNull final CommandSender sender, @NotNull final Command cmd, @NotNull final String label, @NotNull final String[] args) {
         if (sender.hasPermission("phantomcore.template")) {
