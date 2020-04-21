@@ -25,7 +25,7 @@ public class PhantomCore extends JavaPlugin {
     @Override
     public void onLoad() {
         manager = new Manager(this);
-        utils = new Utils(this);
+        utils = new Utils();
         pluginManager = getServer().getPluginManager();
     }
 

@@ -53,6 +53,14 @@ players-only: '&a&lPhantomCore: &7Only players can use this command.'
 #s
 setwarp: '&a&lPhantomCore: &7Set warp &a%warp%&7.'
 setwarp-usage: '&a&lPhantomCore: &7Usage: &a/setwarp <warp name>'
+spawn-bad-location: '&a&lPhantomCore: &7Either the spawn isn''t set, or the current spawn location is invalid.'
+spawn-set: '&a&lPhantomCore: &7Set spawn at &a%x%&7, &a%y%&7, &a%z%&7 in world &a%world%&7.'
+spawn-set-usage: '&a&lPhantomCore: &7Usage: &a/setspawn'
+spawn-teleported: '&a&lPhantomCore: &7Welcome to spawn!'
+spawn-teleported-by: '&a&lPhantomCore: &r%sender%&7 sent you to spawn.'
+spawn-teleported-others: '&a&lPhantomCore: &7Teleported &r%target%&7 to spawn.'
+spawn-usage: '&a&lPhantomCore: &7Usage: &a/spawn [player]'
+spawn-usage-console: '&a&lPhantomCore: &7Usage (console): &a/spawn <player>'
 #t
 #u
 #v
@@ -78,4 +86,4 @@ warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no long
 #y
 #z
 
-file-version: 2
+file-version: 3

@@ -1,1 +1,4 @@
-file-version: 1
+# Should all teleportations (warps, spawn, tpa) teleport the player to the exact centre of the block?
+teleport-to-centre: true
+
+file-version: 2

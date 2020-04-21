@@ -47,31 +47,64 @@ commands:
 permissions:
   phantomcore.delwarp:
     default: op
+    description: allowed to delete a wapr
   phantomcore.invsee:
     default: op
+    description: allowed to use /invse
   phantomcore.near:
     default: true
+    description: allowed to use /near
   phantomcore.near.others:
     default: op
+    description: allowed to specify a target in /near
   phantomcore.vanish:
     default: op
+    description: allowed to use /vanish
   phantomcore.vanish.others:
     default: op
+    description: allowed to specify a target in /vanish
   phantomcore.warp:
     default: true
+    description: allowed to use /warp
   phantomcore.warp.others:
     default: op
+    description: allowed to specify a target in /warp
   phantomcore.broadcast:
     default: op
+    description: allowed to use /broadcast <message>
   phantomcore.clearinventory:
     default: op
+    description: allowed to clear your own inventory in /clearinventory [target]
   phantomcore.clearinventory.others:
     default: op
+    description: allowed to clear target's inventory in /clearinventory [target]
   phantomcore.flyspeed:
     default: op
+    description: allowed to change your own flyspeed in /flyspeed <speed> [target]
   phantomcore.flyspeed.others:
     default: op
+    description: allowed to change target's flyspeed in /flyspeed <speed> [target]
   phantomcore.walkspeed:
     default: op
+    description: allowed to change your own walkspeed in /walkspeed <speed> [target]
   phantomcore.walkspeed.others:
     default: op
+    description: allowed to change target's walkspeed in /walkspeed <speed> [target]
+  phantomcore.spawn:
+    default: true
+    description: allowed to teleport yourself to spawn in /spawn [target]
+  phantomcore.spawn.others:
+    default: op
+    description: allowed to teleport a target to spawn in /spawn [target]
+  phantomcore.setspawn:
+    default: op
+    description: allowed to do /setspawn
+  phantomcore.setwarp:
+    default: op
+    description: allowed to use /setwarp
+  phantomcore.fly:
+    default: op
+    description: allowed to use /fly
+  phantomcore.fly.others:
+    default: op
+    description: allowed to specify a target in /fly
