@@ -56,3 +56,10 @@ other changes:
 - Ordered command registration in alphabetical order
 - Now loading bStats metrics on startup
 - Updated dependency: bStats: v1.5 -> v1.7
+
+1.4.1-ALPHA:
+- modified 'messages.yml', updated 'file-version'
+- added '/gamemode' with alias '/gm' and short variants '/gmc', '/gma', '/gms', '/gmsp'. <gamemode> can be an old ID (e.g. survival = 0, creative = 1) or abbreviation (creative = c, spectator = sp).
+- added lots of '/gamemode' permissions: 'phantomcore.gamemode', 'phantomcore.gamemode.adventure', 'phantomcore.gamemode.survival', 'phantomcore.gamemode.creative', 'phantomcore.gamemode.spectator', 'phantomcore.gamemode.others'
+- added '/kill' with permission 'phantomcore.kill'
+- added '/suicide' with permission 'phantomcore.suicide'

@@ -138,12 +138,15 @@ public class PhantomCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("delwarp")).setExecutor(new DelWarpCommand(this));
         Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCommand(this));
         Objects.requireNonNull(getCommand("flyspeed")).setExecutor(new FlyspeedCommand(this));
+        Objects.requireNonNull(getCommand("gamemode")).setExecutor(new GameModeCommand(this));
         Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvseeCommand(this));
+        Objects.requireNonNull(getCommand("kill")).setExecutor(new KillCommand(this));
         Objects.requireNonNull(getCommand("near")).setExecutor(new NearCommand(this));
         Objects.requireNonNull(getCommand("setspawn")).setExecutor(new SetSpawnCommand(this));
         Objects.requireNonNull(getCommand("setwarp")).setExecutor(new SetWarpCommand(this));
         Objects.requireNonNull(getCommand("smite")).setExecutor(new SmiteCommand(this));
         Objects.requireNonNull(getCommand("spawn")).setExecutor(new SpawnCommand(this));
+        Objects.requireNonNull(getCommand("suicide")).setExecutor(new SuicideCommand(this));
         Objects.requireNonNull(getCommand("top")).setExecutor(new TopCommand(this));
         Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCommand(this));
         Objects.requireNonNull(getCommand("walkspeed")).setExecutor(new WalkspeedCommand(this));

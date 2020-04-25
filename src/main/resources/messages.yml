@@ -27,11 +27,43 @@ flyspeed-usage-console: '&a&lPhantomCore: &7Usage (console): &a/flyspeed <0-10> 
 flyspeed-set: '&a&lPhantomCore: &7Set your flyspeed to &a%speed%&7.'
 flyspeed-set-other: '&a&lPhantomCore: &7Set &r%player%&7''s flyspeed to &a%speed%&7.'
 #g
+gamemode-adventure-by: '&a&lPhantomCore: &r%sender%&7 updated your gamemode to &aadventure&7.'
+gamemode-adventure-others: '&a&lPhantomCore: &7Set &r%target%&7''s gamemode to &aadventure&7.'
+gamemode-adventure-self: '&a&lPhantomCore: &7Set your gamemode to &aadventure&7.'
+gamemode-adventure-usage: '&a&lPhantomCore: &7Usage: &a/gamemode adventure [player]'
+gamemode-adventure-usage-console: '&a&lPhantomCore: &7Usage (console): &a/gamemode adventure <player>'
+gamemode-adventure-usage-short: '&a&lPhantomCore: &7Usage: &a/gma [player]'
+gamemode-adventure-usage-short-console: '&a&lPhantomCore: &7Usage (console): &a/gma <player>'
+gamemode-creative-by: '&a&lPhantomCore: &r%sender%&7 updated your gamemode to &acreative&7.'
+gamemode-creative-others: '&a&lPhantomCore: &7Set &r%target%&7''s gamemode to &acreative&7.'
+gamemode-creative-self: '&a&lPhantomCore: &7Set your gamemode to &acreative&7.'
+gamemode-creative-usage: '&a&lPhantomCore: &7Usage: &a/gamemode creative [player]'
+gamemode-creative-usage-console: '&a&lPhantomCore: &7Usage (console): &a/gamemode creative <player>'
+gamemode-creative-usage-short: '&a&lPhantomCore: &7Usage: &a/gmc [player]'
+gamemode-creative-usage-short-console: '&a&lPhantomCore: &7Usage (console): &a/gmc <player>'
+gamemode-spectator-by: '&a&lPhantomCore: &r%sender%&7 updated your gamemode to &aspectator&7.'
+gamemode-spectator-others: '&a&lPhantomCore: &7Set &r%target%&7''s gamemode to &aspectator&7.'
+gamemode-spectator-self: '&a&lPhantomCore: &7Set your gamemode to &aspectator&7.'
+gamemode-spectator-usage: '&a&lPhantomCore: &7Usage: &a/gamemode spectator [player]'
+gamemode-spectator-usage-console: '&a&lPhantomCore: &7Usage (console): &a/gamemode spectator <player>'
+gamemode-spectator-usage-short: '&a&lPhantomCore: &7Usage: &a/gmsp [player]'
+gamemode-spectator-usage-short-console: '&a&lPhantomCore: &7Usage (console): &a/gmsp <player>'
+gamemode-survival-by: '&a&lPhantomCore: &r%sender%&7 updated your gamemode to &asurvival&7.'
+gamemode-survival-others: '&a&lPhantomCore: &7Set &r%target%&7''s gamemode to &asurvival&7.'
+gamemode-survival-self: '&a&lPhantomCore: &7Set your gamemode to &asurvival&7.'
+gamemode-survival-usage: '&a&lPhantomCore: &7Usage: &a/gamemode survival [player]'
+gamemode-survival-usage-console: '&a&lPhantomCore: &7Usage (console): &a/gamemode survival <player>'
+gamemode-survival-usage-short: '&a&lPhantomCore: &7Usage: &a/gms [player]'
+gamemode-survival-usage-short-console: '&a&lPhantomCore: &7Usage (console): &a/gms <player>'
+gamemode-usage: '&a&lPhantomCore: &7Usage: &a/gamemode <gamemode> [player]'
 #h
 #i
 invsee-usage: '&a&lPhantomCore: &7Usage: &a/invsee <player>'
 #j
 #k
+kill-by: '&a&lPhantomCore: &r%sender%&7 killed you.'
+kill-success: '&a&lPhantomCore: &7You killed &r%target%&7.'
+kill-usage: '&a&lPhantomCore: &7Usage: &a/kill <player>'
 #l
 #m
 #n
@@ -67,6 +99,8 @@ spawn-teleported-by: '&a&lPhantomCore: &r%sender%&7 sent you to spawn.'
 spawn-teleported-others: '&a&lPhantomCore: &7Teleported &r%target%&7 to spawn.'
 spawn-usage: '&a&lPhantomCore: &7Usage: &a/spawn [player]'
 spawn-usage-console: '&a&lPhantomCore: &7Usage (console): &a/spawn <player>'
+suicide-success: '&a&lPhantomCore: &7You took your own life.'
+suicide-usage: '&a&lPhantomCore: &7Usage: &a/suicide'
 #t
 top-usage: '&a&lPhantomCore: &7Usage: &a/top'
 top-success: '&a&lPhantomCore: &7Poof!'
@@ -94,4 +128,4 @@ warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no long
 #y
 #z
 
-file-version: 4
+file-version: 5

@@ -27,8 +27,15 @@ commands:
   flyspeed:
     description: Set your fly speed.
     usage: /<command> <speed 0-10>
+  gamemode:
+    description: Change your gamemode.
+    usage: /<command> <gamemode> [player]
+    aliases: [gm, gma, gmc, gms, gmsp]
   invsee:
     description: View the inventory of an online player.
+    usage: /<command> <player>
+  kill:
+    description: Kill a player
     usage: /<command> <player>
   near:
     description: View nearby players (within 200 blocks).
@@ -45,6 +52,9 @@ commands:
   spawn:
     description: Teleport to spawn.
     usage: /<command> [player]
+  suicide:
+    description: Take your own life.
+    usage: /<command>
   top:
     description: Teleport to the highest block of your x and z coordinate.
     usage: /<command>
@@ -131,3 +141,27 @@ permissions:
   phantomcore.top:
     default: op
     description: allowed to use /top
+  phantomcore.gamemode:
+    default: op
+    description: allowed to use /gamemode
+  phantomcore.gamemode.survival:
+    default: op
+    description: allowed to use /gamemode survival
+  phantomcore.gamemode.creative:
+    default: op
+    description: allowed to use /gamemode creative
+  phantomcore.gamemode.adventure:
+    default: op
+    description: allowed to use /gamemode adventure
+  phantomcore.gamemode.spectator:
+    default: op
+    description: allowed to use /gamemode spectator
+  phantomcore.gamemode.others:
+    default: op
+    description: allowed to specify a target in /gamemode
+  phantomcore.kill:
+    default: op
+    description: allowed to use /kill
+  phantomcore.suicide:
+    default: true
+    description: allowed to use /suicide

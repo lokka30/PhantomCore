@@ -6,7 +6,7 @@
 
     <groupId>io.github.lokka30</groupId>
     <artifactId>PhantomCore</artifactId>
-    <version>1.4.0-ALPHA</version>
+    <version>1.4.1-ALPHA</version>
 
     <name>PhantomCore</name>
     <description>All the necessities for your server.</description>

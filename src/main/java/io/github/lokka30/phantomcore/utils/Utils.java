@@ -15,7 +15,7 @@ public class Utils {
     }
 
     public int getLatestMessagesVersion() {
-        return 4;
+        return 5;
     }
 
     public int getLatestDataVersion() {
