@@ -72,7 +72,6 @@ other changes:
 - added 'teleport on first join' feature, highly configurable.
 
 1.4.3-ALPHA:
-not released yet
 - modified 'messages.yml', updated 'file-version'
 - changed colour scheme from lime to aqua
 - fixed god mode array list null
