@@ -6,14 +6,13 @@ import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
 
 public class Manager {
 
     private PhantomCore instance;
 
-    public Manager(final PhantomCore instance) {
-        this.instance = instance;
-    }
+    private ArrayList<UUID> godModePlayers;
 
     public int getDistanceBetween(final Player player1, final Player player2) {
         return (int) player1.getLocation().distance(player2.getLocation());
@@ -53,5 +52,22 @@ public class Manager {
         }
 
         return nearbyPlayers;
+    }
+
+    public Manager(final PhantomCore instance) {
+        this.instance = instance;
+        godModePlayers = null;
+    }
+
+    public ArrayList<UUID> getGodModePlayers() {
+        return godModePlayers;
+    }
+
+    public void addGodModePlayer(UUID uuid) {
+        godModePlayers.add(uuid);
+    }
+
+    public void removeGodModePlayer(UUID uuid) {
+        godModePlayers.remove(uuid);
     }
 }

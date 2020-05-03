@@ -1,3 +1,31 @@
+# Spawn on Join Settings
+join-teleportation:
+
+  # Should players teleport to spawn when they join for the first time?
+  # Overrides both settings below.
+  teleport-to-spawn-on-join:
+    enabled: true
+    only-first-join: true
+
+  # Should players teleport to a warp when they join for the first time?
+  # Overrides the setting below.
+  teleport-to-warp-on-join:
+    enabled: false
+    only-first-join: true
+    warp: 'welcome'
+
+  # Should players teleport to a specific location when they join for the first time?
+  teleport-to-location-on-join:
+    enabled: false
+    only-first-join: true
+    location:
+      x: 123.45
+      y: 123.45
+      z: 123.45
+      world: 'world'
+      yaw: -180.0
+      pitch: 2.0
+
 # Should all teleportations (warps, spawn, tpa) teleport the player to the exact centre of the block?
 # Suggested: Yes, so players aren't accidentally standing in lava as well (for example).
 teleport-to-centre: true
@@ -6,4 +34,7 @@ teleport-to-centre: true
 # Suggested: 100-200
 target-block-range: 100
 
-file-version: 3
+# Should /heal remove all of your potion effects, just as a milk bucket does?
+heal-removes-all-potion-effects: true
+
+file-version: 4

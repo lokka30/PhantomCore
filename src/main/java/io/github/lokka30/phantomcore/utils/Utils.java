@@ -11,11 +11,11 @@ public class Utils {
     }
 
     public int getLatestSettingsVersion() {
-        return 3;
+        return 4;
     }
 
     public int getLatestMessagesVersion() {
-        return 5;
+        return 6;
     }
 
     public int getLatestDataVersion() {

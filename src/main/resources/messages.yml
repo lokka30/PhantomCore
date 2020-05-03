@@ -12,7 +12,19 @@ clear-inventory-self: '&a&lPhantomCore: &7Cleared your inventory.'
 delwarp: '&a&lPhantomCore: &7Deleted warp &a%warp%&7.'
 delwarp-usage: '&a&lPhantomCore: &7Usage: &a/delwarp <warp name>'
 #e
+enchant-invalid-level: '&a&lPhantomCore: &r%level%&7 isn''t a valid enchantment level.'
+enchant-level-too-low: '&a&lPhantomCore: &r%level%&7 is below &r%enchantment%&7''s minimum level of &r%minLevel%&7.'
+enchant-no-item-in-hands: '&a&lPhantomCore: &7You don''t have an item in either of your hands.'
+enchant-success: '&a&lPhantomCore: &7Enchanted &r%item%&7 with &r%enchantment% &7level &r%level%&7.'
+enchant-unknown: '&a&lPhantomCore: &7Unknown enchantment ''&r%enchantment%&7''.'
+enchant-unsafe: '&a&lPhantomCore: &7You don''t have permission to apply unsafe enchantments. &8(&r%item% &7can''t be legitemately enchanted with &r%enchantment% &7level &r%level%&8)'
+enchant-usage: '&a&lPhantomCore: &7Usage: &a/enchant <enchantment> [level]'
 #f
+feed-by: '&a&lPhantomCore: &7You were fed by &r%sender%&7.'
+feed-others: '&a&lPhantomCore: &7You fed &r%player%&7.'
+feed-self: '&a&lPhantomCore: &7You''re not hungry anymore.'
+feed-usage: '&a&lPhantomCore: &7Usage: &a/feed [player]'
+feed-usage-console: '&a&lPhantomCore: &7Usage (console): &a/feed <player>'
 fly-mode-disabled: '&a&lPhantomCore: &7Flight mode &cdisabled&7.'
 fly-mode-disabled-by: '&a&lPhantomCore: &7Flight mode &cdisabled&7 by &r%sender&7.'
 fly-mode-disabled-others: '&a&lPhantomCore: &7Flight mode &cdisabled&7 for &r%player%&7.'
@@ -56,7 +68,24 @@ gamemode-survival-usage-console: '&a&lPhantomCore: &7Usage (console): &a/gamemod
 gamemode-survival-usage-short: '&a&lPhantomCore: &7Usage: &a/gms [player]'
 gamemode-survival-usage-short-console: '&a&lPhantomCore: &7Usage (console): &a/gms <player>'
 gamemode-usage: '&a&lPhantomCore: &7Usage: &a/gamemode <gamemode> [player]'
+god-self-disabled: '&a&lPhantomCore: &7God mode &cdisabled&7.'
+god-self-disabled-already: '&a&lPhantomCore: &7God mode is already &cdisabled&7.'
+god-self-enabled: '&a&lPhantomCore: &7God mode &aenabled&7.'
+god-self-enabled-already: '&a&lPhantomCore: &7God mode is already &aenabled&7.'
+god-others-disabled: '&a&lPhantomCore: &7God mode &cdisabled&7 for &r%player%&7.'
+god-others-disabled-already: '&a&lPhantomCore: &r%player%&7 already has god mode &cdisabled&7.'
+god-others-disabled-by: '&a&lPhantomCore: &7God mode &cdisabled&7 by &r%sender%&7.'
+god-others-enabled: '&a&lPhantomCore: &7God mode &aenabled&7 for &r%player%&7.'
+god-others-enabled-already: '&a&lPhantomCore: &r%player%&7 already has god mode &aenabled&7.'
+god-others-enabled-by: '&a&lPhantomCore: &7God mode &aenabled&7 by &r%sender%&7.'
+god-usage: '&a&lPhantomCore: &7Usage: &a/god [on/off] [player]'
+god-usage-console: '&a&lPhantomCore: &7Usage (console): &a/god <on/off> <player>'
 #h
+heal-by: '&a&lPhantomCore: &7You were healed by &r%sender%&7.'
+heal-others: '&a&lPhantomCore: &7You healed &r%player%&7.'
+heal-self: '&a&lPhantomCore: &7You''re feeling better now.'
+heal-usage: '&a&lPhantomCore: &7Usage: &a/heal [player]'
+heal-usage-console: '&a&lPhantomCore: &7Usage (console): &a/heal <player>'
 #i
 invsee-usage: '&a&lPhantomCore: &7Usage: &a/invsee <player>'
 #j
@@ -83,6 +112,8 @@ players-only: '&a&lPhantomCore: &7Only players can use this command.'
 #q
 #r
 #s
+saycoords-success: 'My current coordinates: &8(&bx: %x%&7, &by: %y%&7, &bz: %z%&7 in world ''&b%world%&7''&8)'
+saycoords-usage: '&a&lPhantomCore: &7Usage: &a/saycoords'
 setwarp: '&a&lPhantomCore: &7Set warp &a%warp%&7.'
 setwarp-usage: '&a&lPhantomCore: &7Usage: &a/setwarp <warp name>'
 smite-no-target-block: '&a&lPhantomCore: &7You aren''t looking at a block within a range of &a%amount%&7.'
@@ -124,8 +155,11 @@ warp-null: '&a&lPhantomCore: &7A warp named &a%warp%&7 doesn''t exist.'
 warp-other: '&a&lPhantomCore: &7Sent &r%player%&7 to the warp &a%warp%&7.'
 warp-usage: '&a&lPhantomCore: &7Usage: &a/warp <warp name> [player]'
 warp-world-null: '&a&lPhantomCore: &7The world in which the warp was set no longer exists.'
+workbench-self: '&a&lPhantomCore: &7Poof!'
+workbench-usage: '&a&lPhantomCore: &7Usage: &a/workbench [player]'
+workbench-usage-console: '&a&lPhantomCore: &7Usage (console): &a/workbench <player>'
 #x
 #y
 #z
 
-file-version: 5
+file-version: 6

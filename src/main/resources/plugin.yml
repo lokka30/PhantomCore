@@ -21,6 +21,13 @@ commands:
   delwarp:
     description: Delete a warp.
     usage: /<command> <warp name>
+  enchant:
+    description: Enchant the item in your main hand or off hand.
+    usage: /<command> <enchantment> [level]
+    aliases: [ench, enchantment]
+  feed:
+    description: Fill your hunger bar.
+    usage: /<command> [player]
   fly:
     description: Toggle if you are allowed to fly.
     usage: /<command> [on/off] [player]
@@ -31,6 +38,14 @@ commands:
     description: Change your gamemode.
     usage: /<command> <gamemode> [player]
     aliases: [gm, gma, gmc, gms, gmsp]
+  god:
+    description: Enable/disable invulnerability mode
+    usage: /<command> [on/off] [player]
+    aliases: [godmode, invincible, invulnerable]
+  heal:
+    description: Heal a player
+    usage: /<command> [player]
+    aliases: [medkit, medic]
   invsee:
     description: View the inventory of an online player.
     usage: /<command> <player>
@@ -40,6 +55,12 @@ commands:
   near:
     description: View nearby players (within 200 blocks).
     usage: /<command> [player]
+  phantomcore:
+    description: View plugin information.
+    usage: /<command>
+  saycoords:
+    description: Say your coordinates in chat
+    usage: /<command>
   setspawn:
     description: Set the spawn point to your current location.
     usage: /<command>
@@ -67,6 +88,9 @@ commands:
   warp:
     description: Teleport to a warp.
     usage: /<command> <warp name> [player]
+  workbench:
+    description: Open a portable workbench.
+    usage: /<command> [player]
 
 permissions:
   phantomcore.delwarp:
@@ -165,3 +189,36 @@ permissions:
   phantomcore.suicide:
     default: true
     description: allowed to use /suicide
+  phantomcore.god:
+    default: op
+    description: allowed to use /god
+  phantomcore.god.others:
+    default: op
+    description: allowed to specify a target in /god
+  phantomcore.saycoords:
+    default: true
+    description: allowed to use /saycoords
+  phantomcore.workbench:
+    default: op
+    description: allowed to use /workbench
+  phantomcore.workbench.others:
+    default: op
+    description: allowed to specify a target in /workbench
+  phantomcore.heal:
+    default: op
+    description: allowed to use /heal
+  phantomcore.heal.others:
+    default: op
+    description: allowed to specify a target in /heal
+  phantomcore.feed:
+    default: op
+    description: allowed to use /feed
+  phantomcore.feed.others:
+    default: op
+    description: allowed to specify a target in /feed
+  phantomcore.enchant:
+    default: op
+    description: allowed to use /enchant
+  phantomcore.enchant.unsafe:
+    default: op
+    description: allowed to bypass the item enchant limits in /enchant

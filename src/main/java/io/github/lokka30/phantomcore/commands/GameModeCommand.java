@@ -20,7 +20,7 @@ public class GameModeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull final CommandSender sender, @NotNull final Command cmd, @NotNull final String label, @NotNull final String[] args) {
         if (sender.hasPermission("phantomcore.gamemode")) {
-            switch (cmd.getLabel().toLowerCase()) {
+            switch (label.toLowerCase()) {
                 case "gms":
                     if (sender.hasPermission("phantomcore.gamemode") && sender.hasPermission("phantomcore.gamemode.survival")) {
                         if (args.length == 0) {

@@ -63,3 +63,10 @@ other changes:
 - added lots of '/gamemode' permissions: 'phantomcore.gamemode', 'phantomcore.gamemode.adventure', 'phantomcore.gamemode.survival', 'phantomcore.gamemode.creative', 'phantomcore.gamemode.spectator', 'phantomcore.gamemode.others'
 - added '/kill' with permission 'phantomcore.kill'
 - added '/suicide' with permission 'phantomcore.suicide'
+
+1.4.2-ALPHA:
+- modified 'settings.yml', updated 'file-version'
+- modified 'messages.yml', updated 'file-version'
+- added '/phantomcore', '/god [on/off] [player]', '/saycoords', '/workbench [player]', '/heal [player]', '/feed [player]', '/enchant <enchantment> [level]'
+- added permissions 'phantomcore.god', 'phantomcore.god.others', 'phantomcore.saycoords', 'phantomcore.workbench', 'phantomcore.workbench.others', 'phantomcore.heal', 'phantomcore.heal.others', 'phantomcore.feed', 'phantomcore.feed.others', 'phantomcore.enchant', 'phantomcore.enchant.unsafe'
+- added 'teleport on first join' feature, highly configurable.

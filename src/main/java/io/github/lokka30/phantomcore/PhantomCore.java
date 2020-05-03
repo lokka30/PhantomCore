@@ -3,6 +3,7 @@ package io.github.lokka30.phantomcore;
 import de.leonhard.storage.LightningBuilder;
 import de.leonhard.storage.internal.FlatFile;
 import io.github.lokka30.phantomcore.commands.*;
+import io.github.lokka30.phantomcore.events.JoinTeleportationListener;
 import io.github.lokka30.phantomcore.events.JoinVanishUpdateListener;
 import io.github.lokka30.phantomcore.utils.LogLevel;
 import io.github.lokka30.phantomcore.utils.Utils;
@@ -129,6 +130,7 @@ public class PhantomCore extends JavaPlugin {
     }
 
     private void registerEvents() {
+        pluginManager.registerEvents(new JoinTeleportationListener(this), this);
         pluginManager.registerEvents(new JoinVanishUpdateListener(this), this);
     }
 
@@ -136,12 +138,18 @@ public class PhantomCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("broadcast")).setExecutor(new BroadcastCommand(this));
         Objects.requireNonNull(getCommand("clearinventory")).setExecutor(new ClearInventoryCommand(this));
         Objects.requireNonNull(getCommand("delwarp")).setExecutor(new DelWarpCommand(this));
+        Objects.requireNonNull(getCommand("enchant")).setExecutor(new EnchantCommand(this));
+        Objects.requireNonNull(getCommand("feed")).setExecutor(new FeedCommand(this));
         Objects.requireNonNull(getCommand("fly")).setExecutor(new FlyCommand(this));
         Objects.requireNonNull(getCommand("flyspeed")).setExecutor(new FlyspeedCommand(this));
         Objects.requireNonNull(getCommand("gamemode")).setExecutor(new GameModeCommand(this));
+        Objects.requireNonNull(getCommand("god")).setExecutor(new GodCommand(this));
+        Objects.requireNonNull(getCommand("heal")).setExecutor(new HealCommand(this));
         Objects.requireNonNull(getCommand("invsee")).setExecutor(new InvseeCommand(this));
         Objects.requireNonNull(getCommand("kill")).setExecutor(new KillCommand(this));
         Objects.requireNonNull(getCommand("near")).setExecutor(new NearCommand(this));
+        Objects.requireNonNull(getCommand("phantomcore")).setExecutor(new PhantomCoreCommand(this));
+        Objects.requireNonNull(getCommand("saycoords")).setExecutor(new SayCoordsCommand(this));
         Objects.requireNonNull(getCommand("setspawn")).setExecutor(new SetSpawnCommand(this));
         Objects.requireNonNull(getCommand("setwarp")).setExecutor(new SetWarpCommand(this));
         Objects.requireNonNull(getCommand("smite")).setExecutor(new SmiteCommand(this));
@@ -151,6 +159,7 @@ public class PhantomCore extends JavaPlugin {
         Objects.requireNonNull(getCommand("vanish")).setExecutor(new VanishCommand(this));
         Objects.requireNonNull(getCommand("walkspeed")).setExecutor(new WalkspeedCommand(this));
         Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand(this));
+        Objects.requireNonNull(getCommand("workbench")).setExecutor(new WorkbenchCommand(this));
     }
 
     public String colorize(final String msg) {
