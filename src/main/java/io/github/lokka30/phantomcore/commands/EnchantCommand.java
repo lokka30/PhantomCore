@@ -1,5 +1,6 @@
 package io.github.lokka30.phantomcore.commands;
 
+import com.cryptomorin.xseries.XEnchantment;
 import io.github.lokka30.phantomcore.PhantomCore;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -28,7 +29,7 @@ public class EnchantCommand implements CommandExecutor {
                 Enchantment enchantment;
                 switch (args.length) {
                     case 1:
-                        enchantment = Enchantment.getByName(args[0].toUpperCase());
+                        enchantment = XEnchantment.matchXEnchantment(args[0].toUpperCase()).get().parseEnchantment();
 
                         if (enchantment == null) {
                             player.sendMessage(instance.colorize(instance.messages.get("enchant-unknown", "%enchantment% is not an enchantment"))
@@ -69,7 +70,7 @@ public class EnchantCommand implements CommandExecutor {
                         }
                         break;
                     case 2:
-                        enchantment = Enchantment.getByName(args[0].toUpperCase());
+                        enchantment = XEnchantment.matchXEnchantment(args[0].toUpperCase()).get().parseEnchantment();
                         int level;
 
                         try {
@@ -96,7 +97,7 @@ public class EnchantCommand implements CommandExecutor {
                             } else {
                                 if (mainHand.getType() != Material.AIR) {
                                     if (player.hasPermission("phantomcore.enchant.unsafe") || enchantment.canEnchantItem(mainHand) || enchantment.getMaxLevel() >= level) {
-                                        player.getInventory().setItemInMainHand(enchant(mainHand, enchantment, startLevel));
+                                        player.getInventory().setItemInMainHand(enchant(mainHand, enchantment, level));
                                         player.sendMessage(instance.colorize(instance.messages.get("enchant-success", "enchanted %item% with %enchantment% lvl %level%"))
                                                 .replaceAll("%item%", mainHand.getType().name())
                                                 .replaceAll("%enchantment%", enchantment.getName())
@@ -109,7 +110,7 @@ public class EnchantCommand implements CommandExecutor {
                                     }
                                 } else if (offHand.getType() != Material.AIR) {
                                     if (player.hasPermission("phantomcore.enchant.unsafe") || enchantment.canEnchantItem(mainHand) || enchantment.getMaxLevel() >= level) {
-                                        player.getInventory().setItemInOffHand(enchant(offHand, enchantment, startLevel));
+                                        player.getInventory().setItemInOffHand(enchant(offHand, enchantment, level));
                                         player.sendMessage(instance.colorize(instance.messages.get("enchant-success", "enchanted %item% with %enchantment% lvl %level%"))
                                                 .replaceAll("%item%", offHand.getType().name())
                                                 .replaceAll("%enchantment%", enchantment.getName())

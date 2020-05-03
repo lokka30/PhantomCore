@@ -11,8 +11,11 @@ import java.util.UUID;
 public class Manager {
 
     private PhantomCore instance;
+    private ArrayList<UUID> godModePlayers = new ArrayList<>();
 
-    private ArrayList<UUID> godModePlayers;
+    public Manager(final PhantomCore instance) {
+        this.instance = instance;
+    }
 
     public int getDistanceBetween(final Player player1, final Player player2) {
         return (int) player1.getLocation().distance(player2.getLocation());
@@ -52,11 +55,6 @@ public class Manager {
         }
 
         return nearbyPlayers;
-    }
-
-    public Manager(final PhantomCore instance) {
-        this.instance = instance;
-        godModePlayers = null;
     }
 
     public ArrayList<UUID> getGodModePlayers() {

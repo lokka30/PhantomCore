@@ -23,7 +23,7 @@ public class PhantomCoreCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull final CommandSender sender, @NotNull final Command cmd, @NotNull final String label, @NotNull final String[] args) {
         sender.sendMessage(instance.colorize("&7This server is running &bPhantomCore v" + instance.getDescription().getVersion() + "&7."));
-        sender.sendMessage(instance.colorize("&7Git Repo: &bgithub.com/lokka30/PhantomCore"));
+        sender.sendMessage(instance.colorize("&7Git Repo: &3github.com/lokka30/PhantomCore"));
         return true;
     }
 }

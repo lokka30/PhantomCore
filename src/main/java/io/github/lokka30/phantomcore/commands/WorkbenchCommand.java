@@ -24,7 +24,7 @@ public class WorkbenchCommand implements CommandExecutor {
                 case 0:
                     if (sender instanceof Player) {
                         final Player player = (Player) sender;
-                        player.openWorkbench(player.getLocation(), false);
+                        player.openWorkbench(player.getLocation(), true);
                         player.sendMessage(instance.colorize(instance.messages.get("workbench-self", "Poof!")));
                     } else {
                         sender.sendMessage(instance.colorize(instance.messages.get("workbench-usage-console", "Usage console: /workbench <player>")));
@@ -37,7 +37,7 @@ public class WorkbenchCommand implements CommandExecutor {
                             sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
                                     .replaceAll("%player%", args[0]));
                         } else {
-                            target.openWorkbench(target.getLocation(), false);
+                            target.openWorkbench(target.getLocation(), true);
                             sender.sendMessage(instance.colorize(instance.messages.get("workbench-others", "made %player% open a workbench"))
                                     .replaceAll("%player%", target.getName()));
                             target.sendMessage(instance.colorize(instance.messages.get("workbench-by", "%sender% made you open a workbench"))

@@ -70,9 +70,9 @@ public class PhantomCore extends JavaPlugin {
         String recommendedVersion = utils.getRecommendedServerVersion();
 
         if (currentVersion.contains(recommendedVersion)) {
-            log(LogLevel.INFO, "&a[Using Supported Version]&7 Server is running recommended version &a" + currentVersion + "&7.");
+            log(LogLevel.INFO, "&b[Using Supported Version]&7 Server is running recommended version &b" + currentVersion + "&7.");
         } else {
-            log(LogLevel.WARNING, "&e[Using Unsupported Version] &7You are not running a recommended server version. The author's support will only be given to users running &a" + recommendedVersion + "&7.");
+            log(LogLevel.WARNING, "&b[Using Unsupported Version] &7You are not running a recommended server version. The author's support will only be given to users running &b" + recommendedVersion + "&7.");
         }
 
         //More checks will be added if required. Currently it always returns true.
@@ -101,31 +101,31 @@ public class PhantomCore extends JavaPlugin {
         final File dataFile = new File(path + "data.json");
 
         if (!(settingsFile.exists() && !settingsFile.isDirectory())) {
-            log(LogLevel.INFO, "File &asettings.yml&7 doesn't exist. Creating it now.");
+            log(LogLevel.INFO, "File &bsettings.yml&7 doesn't exist. Creating it now.");
             saveResource("settings.yml", false);
         }
 
         if (!(messagesFile.exists() && !messagesFile.isDirectory())) {
-            log(LogLevel.INFO, "File &amessages.yml&7 doesn't exist. Creating it now.");
+            log(LogLevel.INFO, "File &bmessages.yml&7 doesn't exist. Creating it now.");
             saveResource("messages.yml", false);
         }
 
         if (!(dataFile.exists() && !dataFile.isDirectory())) {
-            log(LogLevel.INFO, "File &adata.json&7 doesn't exist. Creating it now.");
+            log(LogLevel.INFO, "File &bdata.json&7 doesn't exist. Creating it now.");
             saveResource("data.json", false);
         }
 
         //Check their versions
         if (settings.get("file-version", 0) != utils.getLatestSettingsVersion()) {
-            log(LogLevel.SEVERE, "File &asettings.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
+            log(LogLevel.SEVERE, "File &bsettings.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
         }
 
         if (messages.get("file-version", 0) != utils.getLatestMessagesVersion()) {
-            log(LogLevel.SEVERE, "File &amessages.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
+            log(LogLevel.SEVERE, "File &bmessages.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
         }
 
         if (data.get("file-version", 0) != utils.getLatestDataVersion()) {
-            log(LogLevel.SEVERE, "File &adata.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
+            log(LogLevel.SEVERE, "File &bdata.yml&7 is out of date! Errors are likely to occur! Reset it or merge the old values to the new file.");
         }
     }
 
@@ -167,7 +167,7 @@ public class PhantomCore extends JavaPlugin {
     }
 
     public void log(final LogLevel level, String msg) {
-        msg = colorize("&aPhantomCore: &7" + msg);
+        msg = colorize("&b&lPhantomCore: &7" + msg);
 
         switch (level) {
             case INFO:

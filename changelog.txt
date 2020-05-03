@@ -70,3 +70,17 @@ other changes:
 - added '/phantomcore', '/god [on/off] [player]', '/saycoords', '/workbench [player]', '/heal [player]', '/feed [player]', '/enchant <enchantment> [level]'
 - added permissions 'phantomcore.god', 'phantomcore.god.others', 'phantomcore.saycoords', 'phantomcore.workbench', 'phantomcore.workbench.others', 'phantomcore.heal', 'phantomcore.heal.others', 'phantomcore.feed', 'phantomcore.feed.others', 'phantomcore.enchant', 'phantomcore.enchant.unsafe'
 - added 'teleport on first join' feature, highly configurable.
+
+1.4.3-ALPHA:
+not released yet
+- modified 'messages.yml', updated 'file-version'
+- changed colour scheme from lime to aqua
+- fixed god mode array list null
+- fixed /spawn world name check null
+- fixed incorrect location path in 'teleport to location on join'
+- fixed missing messages 'workbench-by', 'workbench-others'
+- fixed WorkbenchCommand not forcing workbench to be opened
+- fixed 'level' argument in '/enchant' not functioning
+- fixed '%sender%' placeholder in 'by' of gamemode messages not being translated
+- added XSeries to 'pom.xml'
+  - Enchantments in EnchantCommand should be matched to aliases now

@@ -33,12 +33,10 @@ public class SpawnCommand implements CommandExecutor {
                     final float pitch = instance.data.get("spawn.pitch", 0);
                     final String worldName = instance.data.get("spawn.world", null);
 
-                    final World world = Bukkit.getWorld(worldName);
-
-                    if (world == null) {
+                    if (worldName == null || Bukkit.getWorld(worldName) == null) {
                         player.sendMessage(instance.colorize(instance.messages.get("spawn-bad-location", "Either the spawn isn't set, or the current spawn location is invalid.")));
                     } else {
-                        player.teleport(new Location(world, x, y, z, yaw, pitch));
+                        player.teleport(new Location(Bukkit.getWorld(worldName), x, y, z, yaw, pitch));
                         player.sendMessage(instance.colorize(instance.messages.get("spawn-teleported", "Welcome to spawn!")));
                     }
                 } else {

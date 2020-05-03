@@ -63,12 +63,12 @@ public class JoinTeleportationListener implements Listener {
         } else if (instance.settings.get("join-teleportation.teleport-to-location-on-join.enabled", false)) {
             final boolean isOnlyOnFirstJoin = instance.settings.get("join-teleportation.teleport-to-location-on-join.only-first-join", true);
             if ((hasPlayedBefore && !isOnlyOnFirstJoin) || (!hasPlayedBefore && isOnlyOnFirstJoin)) {
-                final double x = instance.settings.get("join-teleportation.teleport-to-location-on-join.x", 123.45D);
-                final double y = instance.settings.get("join-teleportation.teleport-to-location-on-join.y", 123.45D);
-                final double z = instance.settings.get("join-teleportation.teleport-to-location-on-join.z", 123.45D);
-                final float yaw = instance.settings.get("join-teleportation.teleport-to-location-on-join.yaw", -180F);
-                final float pitch = instance.settings.get("join-teleportation.teleport-to-location-on-join.pitch", 2.0F);
-                final String worldName = instance.settings.get("join-teleportation.teleport-to-location-on-join.world", null);
+                final double x = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.x", 123.45D);
+                final double y = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.y", 123.45D);
+                final double z = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.z", 123.45D);
+                final float yaw = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.yaw", -180F);
+                final float pitch = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.pitch", 2.0F);
+                final String worldName = instance.settings.get("join-teleportation.teleport-to-location-on-join.location.world", null);
                 if (worldName == null) {
                     instance.log(LogLevel.WARNING, "Setting 'Teleport to Location on Join' (location: 'join-teleportation.teleport-to-location-on-join') is enabled but the world name isn't specified.");
                 } else if (Bukkit.getWorld(worldName) == null) {

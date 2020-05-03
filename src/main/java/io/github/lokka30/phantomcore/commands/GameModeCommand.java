@@ -176,7 +176,8 @@ public class GameModeCommand implements CommandExecutor {
                                                         .replaceAll("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.SURVIVAL);
-                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-by", "%sender% updated your gamemode to survival")));
+                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-by", "%sender% updated your gamemode to survival"))
+                                                        .replaceAll("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-others", "Set %target%'s gamemode to survival"))
                                                         .replaceAll("%target%", target.getName()));
                                             }
@@ -210,7 +211,8 @@ public class GameModeCommand implements CommandExecutor {
                                                         .replaceAll("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.CREATIVE);
-                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-by", "%sender% updated your gamemode to creative")));
+                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-by", "%sender% updated your gamemode to creative"))
+                                                        .replaceAll("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-others", "Set %target%'s gamemode to creative"))
                                                         .replaceAll("%target%", target.getName()));
                                             }
@@ -244,7 +246,8 @@ public class GameModeCommand implements CommandExecutor {
                                                         .replaceAll("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.ADVENTURE);
-                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-by", "%sender% updated your gamemode to adventure")));
+                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-by", "%sender% updated your gamemode to adventure"))
+                                                        .replaceAll("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-others", "Set %target%'s gamemode to adventure"))
                                                         .replaceAll("%target%", target.getName()));
                                             }
@@ -279,7 +282,8 @@ public class GameModeCommand implements CommandExecutor {
                                                         .replaceAll("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.SPECTATOR);
-                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-by", "%sender% updated your gamemode to spectator")));
+                                                target.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-by", "%sender% updated your gamemode to spectator"))
+                                                        .replaceAll("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-others", "Set %target%'s gamemode to spectator"))
                                                         .replaceAll("%target%", target.getName()));
                                             }
