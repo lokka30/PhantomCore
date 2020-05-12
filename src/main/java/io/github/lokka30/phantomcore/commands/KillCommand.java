@@ -24,13 +24,13 @@ public class KillCommand implements CommandExecutor {
                 final Player target = Bukkit.getPlayer(args[0]);
                 if (target == null) {
                     sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                            .replaceAll("%player%", args[0]));
+                            .replace("%player%", args[0]));
                 } else {
                     target.setHealth(0.0);
                     target.sendMessage(instance.colorize(instance.messages.get("kill-by", "%sender% killed you"))
-                            .replaceAll("%sender%", sender.getName()));
+                            .replace("%sender%", sender.getName()));
                     sender.sendMessage(instance.colorize(instance.messages.get("kill-success", "Killed %target%"))
-                            .replaceAll("%target%", target.getName()));
+                            .replace("%target%", target.getName()));
                 }
             } else {
                 sender.sendMessage(instance.colorize(instance.messages.get("kill-usage", "usage /kill <player>")));

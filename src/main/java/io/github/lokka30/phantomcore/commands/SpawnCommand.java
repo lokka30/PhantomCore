@@ -48,7 +48,7 @@ public class SpawnCommand implements CommandExecutor {
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% isn't online."))
-                                .replaceAll("%target%", args[0]));
+                                .replace("%target%", args[0]));
                     } else {
                         final double x = instance.data.get("spawn.x", 0);
                         final double y = instance.data.get("spawn.y", 0);
@@ -64,9 +64,9 @@ public class SpawnCommand implements CommandExecutor {
                         } else {
                             target.teleport(new Location(world, x, y, z, yaw, pitch));
                             sender.sendMessage(instance.colorize(instance.messages.get("spawn-teleported-others", "Teleported %target% to spawn."))
-                                    .replaceAll("%target%", target.getName()));
+                                    .replace("%target%", target.getName()));
                             target.sendMessage(instance.colorize(instance.messages.get("spawn-teleported-by", "%sender% sent you to spawn."))
-                                    .replaceAll("%sender%", sender.getName()));
+                                    .replace("%sender%", sender.getName()));
                         }
                     }
                 } else {

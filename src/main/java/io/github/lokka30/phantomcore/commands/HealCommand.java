@@ -39,13 +39,13 @@ public class HealCommand implements CommandExecutor {
                         final Player target = Bukkit.getPlayer(args[0]);
                         if (target == null) {
                             sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% is offline"))
-                                    .replaceAll("%player%", args[0]));
+                                    .replace("%player%", args[0]));
                         } else {
                             heal(target);
                             sender.sendMessage(instance.colorize(instance.messages.get("heal-others", "you healed %player%"))
-                                    .replaceAll("%player%", target.getName()));
+                                    .replace("%player%", target.getName()));
                             target.sendMessage(instance.colorize(instance.messages.get("heal-by", "you were healed by %sender%"))
-                                    .replaceAll("%sender%", sender.getName()));
+                                    .replace("%sender%", sender.getName()));
                         }
                     } else {
                         sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

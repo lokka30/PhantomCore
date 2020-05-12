@@ -29,7 +29,7 @@ public class WarpCommand implements CommandExecutor {
 
                     if (instance.data.get(path, null) == null) {
                         player.sendMessage(instance.colorize(instance.messages.get("warp-null", "A warp named %warp% doesn't exist."))
-                                .replaceAll("%warp%", warp));
+                                .replace("%warp%", warp));
                     } else {
                         final String worldName = instance.data.get(path + ".world", player.getWorld().getName());
                         final double x = instance.data.get(path + ".x", 0.0D);
@@ -41,11 +41,11 @@ public class WarpCommand implements CommandExecutor {
                         if (Bukkit.getWorld(worldName) == null) {
                             player.sendMessage(instance.colorize(instance.messages.get("warp-world-null", "The world which the warp was set no longer exists.")));
                         } else {
-                            //TODO teleport timer
+                            //teleport timer goes here.
                             final Location location = new Location(Bukkit.getWorld(worldName), x, y, z, yaw, pitch);
                             player.teleport(location);
                             player.sendMessage(instance.colorize(instance.messages.get("warp", "Welcome to the warp %warp%."))
-                                    .replaceAll("%warp%", warp));
+                                    .replace("%warp%", warp));
                         }
                     }
                 } else {
@@ -59,11 +59,11 @@ public class WarpCommand implements CommandExecutor {
 
                     if (player == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% is not online."))
-                                .replaceAll("%player%", args[1]));
+                                .replace("%player%", args[1]));
                     } else {
                         if (instance.data.get(path, null) == null) {
                             sender.sendMessage(instance.colorize(instance.messages.get("warp-null", "A warp named %warp% doesn't exist."))
-                                    .replaceAll("%warp%", warp));
+                                    .replace("%warp%", warp));
                         } else {
                             final World world = Bukkit.getWorld(instance.data.get(path + ".world", player.getWorld().getName()));
                             final float x = instance.data.get(path + ".x", null);
@@ -75,14 +75,14 @@ public class WarpCommand implements CommandExecutor {
                             if (world == null) {
                                 sender.sendMessage(instance.colorize(instance.messages.get("warp-world-null", "The world which the warp was set no longer exists.")));
                             } else {
-                                //TODO teleport timer
+                                //teleport timer goes here.
                                 final Location location = new Location(world, x, y, z, yaw, pitch);
                                 player.teleport(location);
                                 player.sendMessage(instance.colorize(instance.messages.get("warp", "Welcome to the warp %warp%."))
-                                        .replaceAll("%warp%", warp));
+                                        .replace("%warp%", warp));
                                 sender.sendMessage(instance.colorize(instance.messages.get("warp-other", "Sent %player% to the warp %warp%."))
-                                        .replaceAll("%warp%", warp)
-                                        .replaceAll("%player%", player.getName()));
+                                        .replace("%warp%", warp)
+                                        .replace("%player%", player.getName()));
                             }
                         }
                     }

@@ -39,8 +39,8 @@ public class NearCommand implements CommandExecutor {
                             final int distance = pair.getValue();
 
                             player.sendMessage(instance.colorize(instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
-                                    .replaceAll("%player%", nearbyPlayer.getName())
-                                    .replaceAll("%distance%", String.valueOf(distance)));
+                                    .replace("%player%", nearbyPlayer.getName())
+                                    .replace("%distance%", String.valueOf(distance)));
                             iterator.remove();
                         }
                     }
@@ -53,7 +53,7 @@ public class NearCommand implements CommandExecutor {
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% is not online."))
-                                .replaceAll("%player%", args[0]));
+                                .replace("%player%", args[0]));
                     } else {
                         final HashMap<Player, Integer> nearbyPlayers = instance.manager.getNearbyPlayers(target);
 
@@ -68,8 +68,8 @@ public class NearCommand implements CommandExecutor {
                                 final int distance = pair.getValue();
 
                                 sender.sendMessage(instance.colorize(instance.messages.get("nearby-players-iterator", "- %player% - %distance% blocks away"))
-                                        .replaceAll("%player%", nearbyPlayer.getName())
-                                        .replaceAll("%distance%", String.valueOf(distance)));
+                                        .replace("%player%", nearbyPlayer.getName())
+                                        .replace("%distance%", String.valueOf(distance)));
                                 iterator.remove();
                             }
                         }

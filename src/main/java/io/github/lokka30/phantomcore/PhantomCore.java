@@ -59,8 +59,7 @@ public class PhantomCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        log(LogLevel.INFO, "[Disabling Began]");
-        log(LogLevel.INFO, "[Disabling Complete]");
+        //Method is present for possible use in the future, it is commented out as it is pointless to send status messages if nothing is happening in onDisable.
     }
 
     private boolean checkCompatibility() {
@@ -69,9 +68,7 @@ public class PhantomCore extends JavaPlugin {
         String currentVersion = getServer().getVersion();
         String recommendedVersion = utils.getRecommendedServerVersion();
 
-        if (currentVersion.contains(recommendedVersion)) {
-            log(LogLevel.INFO, "&b[Using Supported Version]&7 Server is running recommended version &b" + currentVersion + "&7.");
-        } else {
+        if (!currentVersion.contains(recommendedVersion)) {
             log(LogLevel.WARNING, "&b[Using Unsupported Version] &7You are not running a recommended server version. The author's support will only be given to users running &b" + recommendedVersion + "&7.");
         }
 

@@ -36,13 +36,13 @@ public class GameModeCommand implements CommandExecutor {
                                 final Player target = Bukkit.getPlayer(args[0]);
                                 if (target == null) {
                                     sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% is not online"))
-                                            .replaceAll("%target%", args[0]));
+                                            .replace("%target%", args[0]));
                                 } else {
                                     target.setGameMode(GameMode.SURVIVAL);
                                     target.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-by", "%sender% set your gamemode to survival"))
-                                            .replaceAll("%sender%", sender.getName()));
+                                            .replace("%sender%", sender.getName()));
                                     sender.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-others", "Set %target%s gamemdoe to survival"))
-                                            .replaceAll("%target%", target.getName()));
+                                            .replace("%target%", target.getName()));
                                 }
                             } else {
                                 sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -69,13 +69,13 @@ public class GameModeCommand implements CommandExecutor {
                                 final Player target = Bukkit.getPlayer(args[0]);
                                 if (target == null) {
                                     sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% is not online"))
-                                            .replaceAll("%target%", args[0]));
+                                            .replace("%target%", args[0]));
                                 } else {
                                     target.setGameMode(GameMode.CREATIVE);
                                     target.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-by", "%sender% set your gamemode to creative"))
-                                            .replaceAll("%sender%", sender.getName()));
+                                            .replace("%sender%", sender.getName()));
                                     sender.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-others", "Set %target%s gamemdoe to creative"))
-                                            .replaceAll("%target%", target.getName()));
+                                            .replace("%target%", target.getName()));
                                 }
                             } else {
                                 sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -102,13 +102,13 @@ public class GameModeCommand implements CommandExecutor {
                                 final Player target = Bukkit.getPlayer(args[0]);
                                 if (target == null) {
                                     sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% is not online"))
-                                            .replaceAll("%target%", args[0]));
+                                            .replace("%target%", args[0]));
                                 } else {
                                     target.setGameMode(GameMode.ADVENTURE);
                                     target.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-by", "%sender% set your gamemode to adventure"))
-                                            .replaceAll("%sender%", sender.getName()));
+                                            .replace("%sender%", sender.getName()));
                                     sender.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-others", "Set %target%s gamemdoe to adventure"))
-                                            .replaceAll("%target%", target.getName()));
+                                            .replace("%target%", target.getName()));
                                 }
                             } else {
                                 sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -135,13 +135,13 @@ public class GameModeCommand implements CommandExecutor {
                                 final Player target = Bukkit.getPlayer(args[0]);
                                 if (target == null) {
                                     sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% is not online"))
-                                            .replaceAll("%target%", args[0]));
+                                            .replace("%target%", args[0]));
                                 } else {
                                     target.setGameMode(GameMode.SPECTATOR);
                                     target.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-by", "%sender% set your gamemode to spectator"))
-                                            .replaceAll("%sender%", sender.getName()));
+                                            .replace("%sender%", sender.getName()));
                                     sender.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-others", "Set %target%s gamemdoe to spectator"))
-                                            .replaceAll("%target%", target.getName()));
+                                            .replace("%target%", target.getName()));
                                 }
                             } else {
                                 sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -173,13 +173,13 @@ public class GameModeCommand implements CommandExecutor {
                                             final Player target = Bukkit.getPlayer(args[1]);
                                             if (target == null) {
                                                 sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                                                        .replaceAll("%player%", args[1]));
+                                                        .replace("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.SURVIVAL);
                                                 target.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-by", "%sender% updated your gamemode to survival"))
-                                                        .replaceAll("%sender%", sender.getName()));
+                                                        .replace("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-survival-others", "Set %target%'s gamemode to survival"))
-                                                        .replaceAll("%target%", target.getName()));
+                                                        .replace("%target%", target.getName()));
                                             }
                                         } else {
                                             sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -208,13 +208,13 @@ public class GameModeCommand implements CommandExecutor {
                                             final Player target = Bukkit.getPlayer(args[1]);
                                             if (target == null) {
                                                 sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                                                        .replaceAll("%player%", args[1]));
+                                                        .replace("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.CREATIVE);
                                                 target.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-by", "%sender% updated your gamemode to creative"))
-                                                        .replaceAll("%sender%", sender.getName()));
+                                                        .replace("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-creative-others", "Set %target%'s gamemode to creative"))
-                                                        .replaceAll("%target%", target.getName()));
+                                                        .replace("%target%", target.getName()));
                                             }
                                         } else {
                                             sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -243,13 +243,13 @@ public class GameModeCommand implements CommandExecutor {
                                             final Player target = Bukkit.getPlayer(args[1]);
                                             if (target == null) {
                                                 sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                                                        .replaceAll("%player%", args[1]));
+                                                        .replace("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.ADVENTURE);
                                                 target.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-by", "%sender% updated your gamemode to adventure"))
-                                                        .replaceAll("%sender%", sender.getName()));
+                                                        .replace("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-adventure-others", "Set %target%'s gamemode to adventure"))
-                                                        .replaceAll("%target%", target.getName()));
+                                                        .replace("%target%", target.getName()));
                                             }
                                         } else {
                                             sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));
@@ -279,13 +279,13 @@ public class GameModeCommand implements CommandExecutor {
                                             final Player target = Bukkit.getPlayer(args[1]);
                                             if (target == null) {
                                                 sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                                                        .replaceAll("%player%", args[1]));
+                                                        .replace("%player%", args[1]));
                                             } else {
                                                 target.setGameMode(GameMode.SPECTATOR);
                                                 target.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-by", "%sender% updated your gamemode to spectator"))
-                                                        .replaceAll("%sender%", sender.getName()));
+                                                        .replace("%sender%", sender.getName()));
                                                 sender.sendMessage(instance.colorize(instance.messages.get("gamemode-spectator-others", "Set %target%'s gamemode to spectator"))
-                                                        .replaceAll("%target%", target.getName()));
+                                                        .replace("%target%", target.getName()));
                                             }
                                         } else {
                                             sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "no permission")));

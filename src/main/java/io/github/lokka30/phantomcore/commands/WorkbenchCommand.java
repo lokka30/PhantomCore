@@ -35,13 +35,13 @@ public class WorkbenchCommand implements CommandExecutor {
                         final Player target = Bukkit.getPlayer(args[0]);
                         if (target == null) {
                             sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% not online"))
-                                    .replaceAll("%player%", args[0]));
+                                    .replace("%player%", args[0]));
                         } else {
                             target.openWorkbench(target.getLocation(), true);
                             sender.sendMessage(instance.colorize(instance.messages.get("workbench-others", "made %player% open a workbench"))
-                                    .replaceAll("%player%", target.getName()));
+                                    .replace("%player%", target.getName()));
                             target.sendMessage(instance.colorize(instance.messages.get("workbench-by", "%sender% made you open a workbench"))
-                                    .replaceAll("%sender%", sender.getName()));
+                                    .replace("%sender%", sender.getName()));
                         }
                     } else {
                         sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

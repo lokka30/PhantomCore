@@ -6,7 +6,6 @@ public class Utils {
     }
 
     public String getRecommendedServerVersion() {
-        //If changing this, consider 'api-version' too.
         return "1.15";
     }
 

@@ -83,3 +83,10 @@ other changes:
 - fixed '%sender%' placeholder in 'by' of gamemode messages not being translated
 - added XSeries to 'pom.xml'
   - Enchantments in EnchantCommand should be matched to aliases now
+
+1.4.4-ALPHA:
+- Attempted Fix | Attempted to fix Enchant command using an incorrect enchant argument. Needs testing.
+- Improvement | Removed 'server is using supported version' message, pointless
+- Improvement | Removed 'onDisable' messages, pointless (suggested by Strahan)
+- Improvement | Using method 'replace' instead of 'replaceAll' (suggested by Strahan)
+- Improvement | Removed a few 'to-do' comments in the code, pointless

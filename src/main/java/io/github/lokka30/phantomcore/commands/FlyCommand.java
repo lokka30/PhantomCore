@@ -61,23 +61,23 @@ public class FlyCommand implements CommandExecutor {
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% isn't online."))
-                                .replaceAll("%player%", args[1]));
+                                .replace("%player%", args[1]));
                     } else {
                         switch (args[0].toLowerCase()) {
                             case "on":
                                 target.setAllowFlight(true);
                                 sender.sendMessage(instance.colorize(instance.messages.get("fly-mode-enabled-others", "Flight mode enabled for %player%."))
-                                        .replaceAll("%player%", target.getName()));
+                                        .replace("%player%", target.getName()));
                                 target.sendMessage(instance.colorize(instance.messages.get("fly-mode-enabled-by", "Flight mode enabled by %sender%."))
-                                        .replaceAll("%sender%", sender.getName()));
+                                        .replace("%sender%", sender.getName()));
                                 break;
                             case "off":
                                 target.setAllowFlight(false);
                                 target.setFlying(false);
                                 sender.sendMessage(instance.colorize(instance.messages.get("fly-mode-disabled-others", "Flight mode disabled for %player%."))
-                                        .replaceAll("%player%", target.getName()));
+                                        .replace("%player%", target.getName()));
                                 target.sendMessage(instance.colorize(instance.messages.get("fly-mode-disabled-by", "Flight mode disabled by %sender%."))
-                                        .replaceAll("%sender%", sender.getName()));
+                                        .replace("%sender%", sender.getName()));
                                 break;
                             default:
                                 sender.sendMessage(instance.colorize(instance.messages.get("fly-usage", "Usage: /fly [on/off] [player]")));

@@ -31,10 +31,10 @@ public class SayCoordsCommand implements CommandExecutor {
                     int z = location.getBlockZ();
                     String world = Objects.requireNonNull(location.getWorld()).getName();
                     player.chat(instance.colorize(instance.messages.get("saycoords-success", "my coords are at %x% %y% %z% in world %world%"))
-                            .replaceAll("%x%", String.valueOf(x))
-                            .replaceAll("%y%", String.valueOf(y))
-                            .replaceAll("%z%", String.valueOf(z))
-                            .replaceAll("%world%", world));
+                            .replace("%x%", String.valueOf(x))
+                            .replace("%y%", String.valueOf(y))
+                            .replace("%z%", String.valueOf(z))
+                            .replace("%world%", world));
                 } else {
                     player.sendMessage(instance.colorize(instance.messages.get("saycoords-usage", "usage: /saycoords")));
                 }

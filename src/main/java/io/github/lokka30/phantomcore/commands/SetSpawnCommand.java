@@ -52,10 +52,10 @@ public class SetSpawnCommand implements CommandExecutor {
                     instance.data.set("spawn.world", worldName);
 
                     player.sendMessage(instance.colorize(instance.messages.get("spawn-set", "Spawn set at %x%, %y%, %z% in world %world%."))
-                            .replaceAll("%x%", String.valueOf(x))
-                            .replaceAll("%y%", String.valueOf(y))
-                            .replaceAll("%z%", String.valueOf(z))
-                            .replaceAll("%world%", worldName));
+                            .replace("%x%", String.valueOf(x))
+                            .replace("%y%", String.valueOf(y))
+                            .replace("%z%", String.valueOf(z))
+                            .replace("%world%", worldName));
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("spawn-set-usage", "Usage: /setspawn")));
                 }

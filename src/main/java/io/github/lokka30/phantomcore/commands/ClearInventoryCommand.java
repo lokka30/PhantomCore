@@ -30,21 +30,20 @@ public class ClearInventoryCommand implements CommandExecutor {
                 }
             } else if (args.length == 1) {
                 if (sender.hasPermission("phantomcore.clearinventory.others")) {
-                    //TODO Clear target's inventory.
                     final Player target = Bukkit.getPlayer(args[0]);
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% isn't online."))
-                                .replaceAll("%player%", args[0]));
+                                .replace("%player%", args[0]));
 
                     } else {
                         target.getInventory().clear();
 
                         sender.sendMessage(instance.colorize(instance.messages.get("clear-inventory-other", "Cleared %player%'s inventory."))
-                                .replaceAll("%player%", target.getName()));
+                                .replace("%player%", target.getName()));
 
                         target.sendMessage(instance.colorize(instance.messages.get("clear-inventory-by-other", "Your inventory was cleared by %sender%."))
-                                .replaceAll("%sender%", sender.getName()));
+                                .replace("%sender%", sender.getName()));
                     }
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

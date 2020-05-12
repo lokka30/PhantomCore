@@ -75,7 +75,7 @@ public class GodCommand implements CommandExecutor {
 
                         if (target == null) {
                             sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% is offline"))
-                                    .replaceAll("%player%", args[1]));
+                                    .replace("%player%", args[1]));
                         } else {
                             final UUID uuid = target.getUniqueId();
 
@@ -84,24 +84,24 @@ public class GodCommand implements CommandExecutor {
                                     if (instance.manager.getGodModePlayers().contains(uuid)) {
                                         instance.manager.getGodModePlayers().remove(uuid);
                                         sender.sendMessage(instance.colorize(instance.messages.get("god-others-disabled", "disabled god for %player%"))
-                                                .replaceAll("%player%", target.getName()));
+                                                .replace("%player%", target.getName()));
                                         target.sendMessage(instance.colorize(instance.messages.get("god-others-disabled-by", "god disabled by %sender%"))
-                                                .replaceAll("%sender%", sender.getName()));
+                                                .replace("%sender%", sender.getName()));
                                     } else {
                                         sender.sendMessage(instance.colorize(instance.messages.get("god-others-disabled-already", "%player% already has god disabled"))
-                                                .replaceAll("%player%", target.getName()));
+                                                .replace("%player%", target.getName()));
                                     }
                                     break;
                                 case "on":
                                     if (instance.manager.getGodModePlayers().contains(uuid)) {
                                         sender.sendMessage(instance.colorize(instance.messages.get("god-others-enabled-already", "%player% already has god enabled"))
-                                                .replaceAll("%player%", target.getName()));
+                                                .replace("%player%", target.getName()));
                                     } else {
                                         instance.manager.addGodModePlayer(uuid);
                                         sender.sendMessage(instance.colorize(instance.messages.get("god-others-enabled", "enabled god for %player%"))
-                                                .replaceAll("%player%", target.getName()));
+                                                .replace("%player%", target.getName()));
                                         target.sendMessage(instance.colorize(instance.messages.get("god-others-enabled-by", "god enabled by %sender%"))
-                                                .replaceAll("%sender%", sender.getName()));
+                                                .replace("%sender%", sender.getName()));
                                     }
                                     break;
                                 default:

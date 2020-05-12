@@ -22,12 +22,12 @@ public class DelWarpCommand implements CommandExecutor {
 
                     if (instance.data.get("warps." + warp, null) == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("warp-null", "A warp named %warp% doesn't exist."))
-                                .replaceAll("%warp%", warp));
+                                .replace("%warp%", warp));
                     } else {
                         instance.data.set("warps." + warp, null);
 
                         sender.sendMessage(instance.colorize(instance.messages.get("delwarp", "Deleted warp %warp%."))
-                                .replaceAll("%warp%", warp));
+                                .replace("%warp%", warp));
                     }
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("delwarp-usage", "Usage: /delwarp <warp name>")));

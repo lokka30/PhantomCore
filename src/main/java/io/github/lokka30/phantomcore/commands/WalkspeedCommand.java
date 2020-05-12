@@ -28,18 +28,18 @@ public class WalkspeedCommand implements CommandExecutor {
                         speed = Float.parseFloat(args[0]);
                     } catch (NumberFormatException exception) {
                         player.sendMessage(instance.colorize(instance.messages.get("walkspeed-invalid-speed", "Invalid walkspeed %arg%, it must be between 0 and 10."))
-                                .replaceAll("%arg%", args[0]));
+                                .replace("%arg%", args[0]));
                         return true;
                     }
 
                     if (speed < 0 || speed > 10) {
                         player.sendMessage(instance.colorize(instance.messages.get("walkspeed-invalid-speed", "Invalid walkspeed %arg%, it must be between 0 and 10."))
-                                .replaceAll("%arg%", args[0]));
+                                .replace("%arg%", args[0]));
                     }
 
                     player.setFlySpeed(speed / 10);
                     player.sendMessage(instance.colorize(instance.messages.get("walkspeed-set", "Set your walkspeed to %speed%."))
-                            .replaceAll("%speed%", args[0]));
+                            .replace("%speed%", args[0]));
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("walkspeed-usage-console", "Usage (console): &a/walkspeed <0-10> <player>")));
                 }
@@ -49,7 +49,7 @@ public class WalkspeedCommand implements CommandExecutor {
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% isn't online."))
-                                .replaceAll("%player%", args[1]));
+                                .replace("%player%", args[1]));
                     } else {
                         float speed;
 
@@ -57,19 +57,19 @@ public class WalkspeedCommand implements CommandExecutor {
                             speed = Float.parseFloat(args[0]);
                         } catch (NumberFormatException exception) {
                             sender.sendMessage(instance.colorize(instance.messages.get("walkspeed-invalid-speed", "Invalid speed %arg%, it must be between 0 and 10."))
-                                    .replaceAll("%arg%", args[0]));
+                                    .replace("%arg%", args[0]));
                             return true;
                         }
 
                         if (speed < 0 || speed > 10) {
                             sender.sendMessage(instance.colorize(instance.messages.get("walkspeed-invalid-speed", "Invalid walkspeed %arg%, it must be between 0 and 10."))
-                                    .replaceAll("%arg%", args[0]));
+                                    .replace("%arg%", args[0]));
                         }
 
                         target.setFlySpeed(speed / 10);
                         sender.sendMessage(instance.colorize(instance.messages.get("walkspeed-set-other", "Set %player%'s walkspeed to %speed%."))
-                                .replaceAll("%player%", args[1])
-                                .replaceAll("%speed%", args[0]));
+                                .replace("%player%", args[1])
+                                .replace("%speed%", args[0]));
                     }
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

@@ -27,10 +27,10 @@ public class InvseeCommand implements CommandExecutor {
 
                     if (target == null) {
                         player.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% isn't online."))
-                            .replaceAll("%player%", args[0]));
+                                .replace("%player%", args[0]));
                     } else {
                         player.sendMessage(instance.colorize(instance.messages.get("opened-inventory", "Opened inventory of %player%."))
-                            .replaceAll("%player%", target.getName()));
+                                .replace("%player%", target.getName()));
                         player.openInventory(target.getInventory());
                     }
                 } else {

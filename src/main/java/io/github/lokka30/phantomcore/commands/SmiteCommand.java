@@ -30,7 +30,7 @@ public class SmiteCommand implements CommandExecutor {
 
                     if (block.getType() == Material.AIR) { //make sure there is a target block
                         player.sendMessage(instance.colorize(instance.messages.get("smite-no-target-block", "You aren't looking at a block within a range of %amount%."))
-                                .replaceAll("%amount%", Integer.toString(range)));
+                                .replace("%amount%", Integer.toString(range)));
                     } else {
                         block.getWorld().strikeLightning(block.getLocation());
                         player.sendMessage(instance.colorize(instance.messages.get("smite-success", "Poof!")));
@@ -44,13 +44,13 @@ public class SmiteCommand implements CommandExecutor {
 
                     if (target == null) {
                         sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%target% isn't online"))
-                                .replaceAll("%target%", args[0]));
+                                .replace("%target%", args[0]));
                     } else {
                         target.getWorld().strikeLightning(target.getLocation());
                         sender.sendMessage(instance.colorize(instance.messages.get("smite-success-others", "You stroke lightning upon %target%!"))
-                                .replaceAll("%target%", target.getName()));
+                                .replace("%target%", target.getName()));
                         target.sendMessage(instance.colorize(instance.messages.get("smite-success-by", "Lightning was struck upon you by %sender%!"))
-                                .replaceAll("%sender%", sender.getName()));
+                                .replace("%sender%", sender.getName()));
                     }
                 } else {
                     sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

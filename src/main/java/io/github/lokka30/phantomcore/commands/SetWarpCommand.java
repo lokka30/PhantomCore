@@ -31,7 +31,7 @@ public class SetWarpCommand implements CommandExecutor {
                     instance.data.set("warps." + warp + ".yaw", player.getLocation().getYaw());
                     instance.data.set("warps." + warp + ".world", Objects.requireNonNull(player.getLocation().getWorld()).getName());
                     player.sendMessage(instance.colorize(instance.messages.get("setwarp", "Set warp %warp%."))
-                            .replaceAll("%warp%", warp));
+                            .replace("%warp%", warp));
                 } else {
                     player.sendMessage(instance.colorize(instance.messages.get("setwarp-usage", "Usage: /setwarp <warp name>")));
                 }

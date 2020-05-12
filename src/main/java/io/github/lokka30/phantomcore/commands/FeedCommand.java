@@ -35,13 +35,13 @@ public class FeedCommand implements CommandExecutor {
                         final Player target = Bukkit.getPlayer(args[0]);
                         if (target == null) {
                             sender.sendMessage(instance.colorize(instance.messages.get("player-not-online", "%player% is offline"))
-                                    .replaceAll("%player%", args[0]));
+                                    .replace("%player%", args[0]));
                         } else {
                             feed(target);
                             sender.sendMessage(instance.colorize(instance.messages.get("feed-others", "you fed %player%"))
-                                    .replaceAll("%player%", target.getName()));
+                                    .replace("%player%", target.getName()));
                             target.sendMessage(instance.colorize(instance.messages.get("feed-by", "you were fed by %sender%"))
-                                    .replaceAll("%sender%", sender.getName()));
+                                    .replace("%sender%", sender.getName()));
                         }
                     } else {
                         sender.sendMessage(instance.colorize(instance.messages.get("no-permission", "You don't have access to that.")));

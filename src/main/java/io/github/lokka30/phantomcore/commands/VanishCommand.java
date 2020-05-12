@@ -44,17 +44,17 @@ public class VanishCommand implements CommandExecutor {
                     final OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(args[0]);
                     if (!offlinePlayer.hasPlayedBefore()) {
                         sender.sendMessage(instance.colorize(instance.messages.get("not-played-before", "%player% hasn't played before."))
-                                .replaceAll("%player%", args[0]));
+                                .replace("%player%", args[0]));
                     } else {
                         final String path = "players." + offlinePlayer.getUniqueId().toString() + ".vanished";
                         if (instance.data.get(path, false)) {
                             instance.data.set(path, false);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-off", "Vanish disabled for %player%.")
-                                    .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
+                                    .replace("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
                         } else {
                             instance.data.set(path, true);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-on", "Vanish enabled for %player%.")
-                                    .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
+                                    .replace("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
                         }
                         instance.manager.updateVanished();
                     }
@@ -66,18 +66,18 @@ public class VanishCommand implements CommandExecutor {
                     final OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(args[0]);
                     if (!offlinePlayer.hasPlayedBefore()) {
                         sender.sendMessage(instance.colorize(instance.messages.get("not-played-before", "%player% hasn't played before."))
-                                .replaceAll("%player%", args[0]));
+                                .replace("%player%", args[0]));
                     } else {
                         final String path = "players." + offlinePlayer.getUniqueId().toString() + ".vanished";
                         if (args[1].equalsIgnoreCase("on")) {
                             instance.data.set(path, true);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-on", "Vanish enabled for %player%.")
-                                    .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
+                                    .replace("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
                             instance.manager.updateVanished();
                         } else if (args[1].equalsIgnoreCase("off")) {
                             instance.data.set(path, false);
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-other-off", "Vanish disabled for %player%.")
-                                    .replaceAll("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
+                                    .replace("%player%", Objects.requireNonNull(offlinePlayer.getName()))));
                             instance.manager.updateVanished();
                         } else {
                             sender.sendMessage(instance.colorize(instance.messages.get("vanish-usage", "Usage: /vanish [player] [on/off]")));
